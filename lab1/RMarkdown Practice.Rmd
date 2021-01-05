@@ -1,0 +1,54 @@
+---
+title: "RMarkdown Practice"
+author: "Byron Corado Perez"
+date: "1/5/2021"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# This is my first Markdown file
+## This is my first Markdown file
+### This is my first Markdown file
+#### This is my first Markdown file
+```{r}
+4*2
+```
+
+## This is my [email](mailto:bacperez@ucdavis.edu)
+## This is [Google](https://www.google.com/)
+
+# Practice
+## 1.Arithmetic Capabilities
+```{r}
+11+3
+21-13
+21/3
+11*13
+```
+
+
+## 2.Title
+
+text
+*italics*
+~subscript~
+
+
+## 3.Code Chunk
+```{r}
+#install.packages("tidyverse")
+library("tidyverse")
+ggplot(mtcars, aes(x = factor(cyl))) +
+    geom_bar()
+```
+
+
+## 4.Knitting to html
+
+
+## 5.Commit and Push to GitHub Repository
+
