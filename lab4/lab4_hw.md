@@ -1,7 +1,7 @@
 ---
 title: "Lab 4 Homework"
 author: "Byron Corado Perez"
-date: "2021-01-19"
+date: "2021-01-20"
 output:
   html_document: 
     theme: spacelab
@@ -36,7 +36,7 @@ homerange<-readr::read_csv("data/Tamburelloetal_HomeRangeDatabase.csv")
 
 ```
 ## 
-## ── Column specification ────────────────────────────────────────────────────────
+## -- Column specification --------------------------------------------------------
 ## cols(
 ##   .default = col_character(),
 ##   mean.mass.g = col_double(),
@@ -47,7 +47,7 @@ homerange<-readr::read_csv("data/Tamburelloetal_HomeRangeDatabase.csv")
 ##   log10.preymass = col_double(),
 ##   PPMR = col_double()
 ## )
-## ℹ Use `spec()` for the full column specifications.
+## i Use `spec()` for the full column specifications.
 ```
 
 ```r
@@ -58,17 +58,17 @@ homerange
 ## # A tibble: 569 x 24
 ##    taxon common.name class order family genus species primarymethod N    
 ##    <chr> <chr>       <chr> <chr> <chr>  <chr> <chr>   <chr>         <chr>
-##  1 lake… american e… acti… angu… angui… angu… rostra… telemetry     16   
-##  2 rive… blacktail … acti… cypr… catos… moxo… poecil… mark-recaptu… <NA> 
-##  3 rive… central st… acti… cypr… cypri… camp… anomal… mark-recaptu… 20   
-##  4 rive… rosyside d… acti… cypr… cypri… clin… fundul… mark-recaptu… 26   
-##  5 rive… longnose d… acti… cypr… cypri… rhin… catara… mark-recaptu… 17   
-##  6 rive… muskellunge acti… esoc… esoci… esox  masqui… telemetry     5    
-##  7 mari… pollack     acti… gadi… gadid… poll… pollac… telemetry     2    
-##  8 mari… saithe      acti… gadi… gadid… poll… virens  telemetry     2    
-##  9 mari… lined surg… acti… perc… acant… acan… lineat… direct obser… <NA> 
-## 10 mari… orangespin… acti… perc… acant… naso  litura… telemetry     8    
-## # … with 559 more rows, and 15 more variables: mean.mass.g <dbl>,
+##  1 lake~ american e~ acti~ angu~ angui~ angu~ rostra~ telemetry     16   
+##  2 rive~ blacktail ~ acti~ cypr~ catos~ moxo~ poecil~ mark-recaptu~ <NA> 
+##  3 rive~ central st~ acti~ cypr~ cypri~ camp~ anomal~ mark-recaptu~ 20   
+##  4 rive~ rosyside d~ acti~ cypr~ cypri~ clin~ fundul~ mark-recaptu~ 26   
+##  5 rive~ longnose d~ acti~ cypr~ cypri~ rhin~ catara~ mark-recaptu~ 17   
+##  6 rive~ muskellunge acti~ esoc~ esoci~ esox  masqui~ telemetry     5    
+##  7 mari~ pollack     acti~ gadi~ gadid~ poll~ pollac~ telemetry     2    
+##  8 mari~ saithe      acti~ gadi~ gadid~ poll~ virens  telemetry     2    
+##  9 mari~ lined surg~ acti~ perc~ acant~ acan~ lineat~ direct obser~ <NA> 
+## 10 mari~ orangespin~ acti~ perc~ acant~ naso  litura~ telemetry     8    
+## # ... with 559 more rows, and 15 more variables: mean.mass.g <dbl>,
 ## #   log10.mass <dbl>, alternative.mass.reference <chr>, mean.hra.m2 <dbl>,
 ## #   log10.hra <dbl>, hra.reference <chr>, realm <chr>, thermoregulation <chr>,
 ## #   locomotion <chr>, trophic.guild <chr>, dimension <chr>, preymass <dbl>,
@@ -109,7 +109,7 @@ str(homerange)
 ```
 
 ```
-## tibble [569 × 24] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+## tibble [569 x 24] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
 ##  $ taxon                     : chr [1:569] "lake fishes" "river fishes" "river fishes" "river fishes" ...
 ##  $ common.name               : chr [1:569] "american eel" "blacktail redhorse" "central stoneroller" "rosyside dace" ...
 ##  $ class                     : chr [1:569] "actinopterygii" "actinopterygii" "actinopterygii" "actinopterygii" ...
@@ -124,7 +124,7 @@ str(homerange)
 ##  $ alternative.mass.reference: chr [1:569] NA NA NA NA ...
 ##  $ mean.hra.m2               : num [1:569] 282750 282.1 116.1 125.5 87.1 ...
 ##  $ log10.hra                 : num [1:569] 5.45 2.45 2.06 2.1 1.94 ...
-##  $ hra.reference             : chr [1:569] "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aquatic Sciences 52 "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aquatic Sciences 52 "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aquatic Sciences 52 "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aquatic Sciences 52 ...
+##  $ hra.reference             : chr [1:569] "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aqu"| __truncated__ "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aqu"| __truncated__ "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aqu"| __truncated__ "Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aqu"| __truncated__ ...
 ##  $ realm                     : chr [1:569] "aquatic" "aquatic" "aquatic" "aquatic" ...
 ##  $ thermoregulation          : chr [1:569] "ectotherm" "ectotherm" "ectotherm" "ectotherm" ...
 ##  $ locomotion                : chr [1:569] "swimming" "swimming" "swimming" "swimming" ...
@@ -261,7 +261,7 @@ levels(homerange$order)
 ## [40] "rodentia"           "salmoniformes"      "scorpaeniformes"   
 ## [43] "siluriformes"       "soricomorpha"       "squamata"          
 ## [46] "strigiformes"       "struthioniformes"   "syngnathiformes"   
-## [49] "testudines"         "tetraodontiformes\xa0" "tinamiformes"
+## [49] "testudines"         "tetraodontiformes<U+00A0>" "tinamiformes"
 ```
 
 **4. What taxa are represented in the `homerange` data frame? Make a new data frame `taxa` that is restricted to taxon, common name, class, order, family, genus, species.**  
@@ -284,7 +284,7 @@ select(homerange, taxon)
 ##  8 marine fishes
 ##  9 marine fishes
 ## 10 marine fishes
-## # … with 559 more rows
+## # ... with 559 more rows
 ```
 
 ```r
@@ -565,7 +565,7 @@ taxa
 ## 264       mammals                   Peter's dukier       mammalia
 ## 265       mammals                       bay dikier       mammalia
 ## 266       mammals                 mountain gazelle       mammalia
-## 267       mammals             G\xfcnther's dik-dik       mammalia
+## 267       mammals             G<fc>nther's dik-dik       mammalia
 ## 268       mammals                    mountain goat       mammalia
 ## 269       mammals                           argali       mammalia
 ## 270       mammals                    bighorn sheep       mammalia
@@ -752,7 +752,7 @@ taxa
 ## 451       mammals               Indian desert jird       mammalia
 ## 452       mammals              broad-toothed mouse       mammalia
 ## 453       mammals               Malagasy giant rat       mammalia
-## 454       mammals         White-bellied\xa0nesomys       mammalia
+## 454       mammals     White-bellied<U+00A0>nesomys       mammalia
 ## 455       mammals                     island mouse       mammalia
 ## 456       mammals                           coruro       mammalia
 ## 457       mammals                Siberian chipmunk       mammalia
@@ -868,576 +868,576 @@ taxa
 ## 567     tortoises          Russian steppe tortoise       reptilia
 ## 568     tortoises                Egyptian tortoise       reptilia
 ## 569       turtles   Eastern spiny softshell turtle       reptilia
-##                     order            family           genus
-## 1          anguilliformes       anguillidae        anguilla
-## 2           cypriniformes      catostomidae       moxostoma
-## 3           cypriniformes        cyprinidae      campostoma
-## 4           cypriniformes        cyprinidae     clinostomus
-## 5           cypriniformes        cyprinidae     rhinichthys
-## 6             esociformes          esocidae            esox
-## 7              gadiformes           gadidae      pollachius
-## 8              gadiformes           gadidae      pollachius
-## 9             perciformes      acanthuridae      acanthurus
-## 10            perciformes      acanthuridae            naso
-## 11            perciformes      acanthuridae            naso
-## 12            perciformes         blennidae   ophioblennius
-## 13            perciformes        carangidae          caranx
-## 14            perciformes     centrarchidae     ambloplites
-## 15            perciformes     centrarchidae         lepomis
-## 16            perciformes     centrarchidae         lepomis
-## 17            perciformes     centrarchidae         lepomis
-## 18            perciformes     centrarchidae     micropterus
-## 19            perciformes     centrarchidae     micropterus
-## 20            perciformes     centrarchidae         pomoxis
-## 21            perciformes    chaetodontidae       chaetodon
-## 22            perciformes    chaetodontidae       chaetodon
-## 23            perciformes    chaetodontidae       chaetodon
-## 24            perciformes    chaetodontidae       chaetodon
-## 25            perciformes    chaetodontidae       chaetodon
-## 26            perciformes  cheilodactylidae  cheilodactylus
-## 27            perciformes       cirrhitidae  amblycirrhitus
-## 28            perciformes       cirrhitidae  cirrhitichthys
-## 29            perciformes          cottidae scorpaenichthys
-## 30            perciformes          gobiidae   amblyeleotris
-## 31            perciformes          gobiidae      lythrypnus
-## 32            perciformes          gobiidae       priolepis
-## 33            perciformes          gobiidae    rhinogobiops
-## 34            perciformes          gobiidae    valenciennea
-## 35            perciformes        kyphosidae        kyphosus
-## 36            perciformes          labridae        bodianus
-## 37            perciformes          labridae        chelinus
-## 38            perciformes          labridae           coris
-## 39            perciformes          labridae     halichoeres
-## 40            perciformes          labridae     halichoeres
-## 41            perciformes          labridae     halichoeres
-## 42            perciformes          labridae     halichoeres
-## 43            perciformes          labridae       labroides
-## 44            perciformes          labridae          labrus
-## 45            perciformes          labridae   opthalmolepis
-## 46            perciformes          labridae   semicossyphus
-## 47            perciformes          labridae   tautogolabrus
-## 48            perciformes          labridae      thalassoma
-## 49            perciformes          labridae      thalassoma
-## 50            perciformes       lethrinidae       lethrinus
-## 51            perciformes        lutjanidae        lutjanus
-## 52            perciformes        lutjanidae        lutjanus
-## 53            perciformes        lutjanidae        lutjanus
-## 54            perciformes        lutjanidae        lutjanus
-## 55            perciformes        lutjanidae         ocyurus
-## 56            perciformes     malacanthidae    caulolatilus
-## 57            perciformes         moronidae   dicentrarchus
-## 58            perciformes          mullidae  mulloidichthys
-## 59            perciformes          mullidae      parupeneus
-## 60            perciformes          percidae           perca
-## 61            perciformes     pomacanthidae       abudefduf
-## 62            perciformes     pomacanthidae      centropyge
-## 63            perciformes     pomacentridae         chromis
-## 64            perciformes     pomacentridae     chrysiptera
-## 65            perciformes     pomacentridae       dascyllus
-## 66            perciformes     pomacentridae     pomacentrus
-## 67            perciformes     pomacentridae       stegastes
-## 68            perciformes     pomacentridae       stegastes
-## 69            perciformes     pomacentridae       stegastes
-## 70            perciformes          scaridae       chlorurus
-## 71            perciformes          scaridae          scarus
-## 72            perciformes          scaridae          scarus
-## 73            perciformes          scaridae       sparisoma
-## 74            perciformes          scaridae       sparisoma
-## 75            perciformes          scaridae       sparisoma
-## 76            perciformes          scaridae       sparisoma
-## 77            perciformes        serranidae   cephalopholis
-## 78            perciformes        serranidae   cephalopholis
-## 79            perciformes        serranidae   cephalopholis
-## 80            perciformes        serranidae   cephalopholis
-## 81            perciformes        serranidae     epinephelus
-## 82            perciformes        serranidae     epinephelus
-## 83            perciformes        serranidae     epinephelus
-## 84            perciformes        serranidae     epinephelus
-## 85            perciformes        serranidae     epinephelus
-## 86            perciformes        serranidae  hypoplectrodes
-## 87            perciformes        serranidae  hypoplectrodes
-## 88            perciformes        serranidae    mycteroperca
-## 89            perciformes        serranidae      paralabrax
-## 90            perciformes        serranidae      paralabrax
-## 91            perciformes        serranidae    plectropomus
-## 92            perciformes        serranidae    plectropomus
-## 93            perciformes        serranidae        serranus
-## 94            perciformes        serranidae        serranus
-## 95            perciformes          sparidae           sarpa
-## 96            perciformes          sparidae          sparus
-## 97          salmoniformes        salmonidae    oncorhynchus
-## 98          salmoniformes        salmonidae    oncorhynchus
-## 99          salmoniformes        salmonidae    oncorhynchus
-## 100         salmoniformes        salmonidae           salmo
-## 101         salmoniformes        salmonidae           salmo
-## 102       scorpaeniformes          cottidae          cottus
-## 103       scorpaeniformes          cottidae          cottus
-## 104       scorpaeniformes          cottidae          cottus
-## 105       scorpaeniformes        sebastidae        sebastes
-## 106       scorpaeniformes        sebastidae        sebastes
-## 107       scorpaeniformes        sebastidae        sebastes
-## 108       scorpaeniformes        sebastidae        sebastes
-## 109       scorpaeniformes        sebastidae        sebastes
-## 110          siluriformes       ictaluridae       ictalurus
-## 111       syngnathiformes      syngnathidae     hippocampus
-## 112       syngnathiformes      syngnathidae        nerophis
-## 113 tetraodontiformes\xa0    tetraodontidae    canthigaster
-## 114       accipitriformes      accipitridae          aquila
-## 115       accipitriformes      accipitridae           buteo
-## 116       accipitriformes      accipitridae       circaetus
-## 117       accipitriformes      accipitridae      hieraaetus
-## 118       accipitriformes      accipitridae      hieraaetus
-## 119       accipitriformes      accipitridae        neophron
-## 120          anseriformes          anatidae            anas
-## 121        apterygiformes       apterygidae         apteryx
-## 122      caprimulgiformes     caprimulgidae     caprimulgus
-## 123       charadriiformes    haematopodidae      haematopus
-## 124         columbidormes        columbidae     scardafella
-## 125         columbiformes        columbidae         columba
-## 126         columbiformes        columbidae    streptopelia
-## 127         coraciiformes        coraciidae        coracias
-## 128         coraciiformes          upupidae           upupa
-## 129          cuculiformes         cuculidae        clamator
-## 130          cuculiformes         cuculidae         cuculus
-## 131          cuculiformes         cuculidae       geococcyx
-## 132          cuculiformes         cuculidae     neopmorphus
-## 133         falconiformes      accipitridae       accipiter
-## 134         falconiformes      accipitridae       accipiter
-## 135         falconiformes      accipitridae       accipiter
-## 136         falconiformes      accipitridae       accipiter
-## 137         falconiformes      accipitridae           buteo
-## 138         falconiformes      accipitridae           buteo
-## 139         falconiformes      accipitridae           buteo
-## 140         falconiformes      accipitridae          circus
-## 141         falconiformes      accipitridae          circus
-## 142         falconiformes      accipitridae          milvus
-## 143         falconiformes        falconidae        caracara
-## 144         falconiformes        falconidae        daptrius
-## 145         falconiformes        falconidae           falco
-## 146         falconiformes        falconidae           falco
-## 147         falconiformes        falconidae           falco
-## 148         falconiformes        falconidae           falco
-## 149         falconiformes        falconidae           falco
-## 150           galliformes       phasianidae          bonasa
-## 151           galliformes       phasianidae    centrocercus
-## 152           galliformes       phasianidae     dendragapus
-## 153           galliformes       phasianidae         lagopus
-## 154           galliformes       phasianidae          perdix
-## 155           galliformes       phasianidae          tetrao
-## 156           galliformes       phasianidae          tetrao
-## 157           galliformes       phasianidae     typmanuchus
-## 158            gruiformes          rallidae        aramides
-## 159            gruiformes          rallidae            crex
-## 160            gruiformes          rallidae          rallus
-## 161         passeriformes    acrocephalisae       hippolais
-## 162         passeriformes      aegithalidae      aegithalos
-## 163         passeriformes         alaudidae         lululla
-## 164         passeriformes      cardinalidae           habia
-## 165         passeriformes      cardinalidae           habia
-## 166         passeriformes         certhidae         certhia
-## 167         passeriformes      cisticolidae       cisticola
-## 168         passeriformes          corvidae          corvus
-## 169         passeriformes          corvidae       nucifraga
-## 170         passeriformes        cotingidae       phytotoma
-## 171         passeriformes       emberizidae      ammodramus
-## 172         passeriformes       emberizidae       passerina
-## 173         passeriformes       emberizidae          pipilo
-## 174         passeriformes       emberizidae          pipilo
-## 175         passeriformes       emberizidae        spizella
-## 176         passeriformes       emberizidae        spizella
-## 177         passeriformes      fringillidae       carduelis
-## 178         passeriformes      fringillidae       fringilla
-## 179         passeriformes      fringillidae         serinus
-## 180         passeriformes         icteridae       sturnella
-## 181         passeriformes         icteridae       sturnella
-## 182         passeriformes          incertae         icteria
-## 183         passeriformes          laniidae         laniuis
-## 184         passeriformes          laniidae         laniuis
-## 185         passeriformes          laniidae          lanius
-## 186         passeriformes          laniidae          lanius
-## 187         passeriformes           mimidae           mimus
-## 188         passeriformes      motacillidae       motacilla
-## 189         passeriformes      motacillidae       motacilla
-## 190         passeriformes      muscicapidae       muscicapa
-## 191         passeriformes      muscicapidae        oenanthe
-## 192         passeriformes      muscicapidae     phoenicurus
-## 193         passeriformes      muscicapidae        saxicola
-## 194         passeriformes           paridae           parus
-## 195         passeriformes           paridae           parus
-## 196         passeriformes           paridae           parus
-## 197         passeriformes           paridae           parus
-## 198         passeriformes         parulidae  geothlypis\xa0
-## 199         passeriformes         parulidae      geothylpis
-## 200         passeriformes         parulidae    protonotaria
-## 201         passeriformes         parulidae         seiurus
-## 202         passeriformes         parulidae       setophaga
-## 203         passeriformes         parulidae       setophaga
-## 204         passeriformes         parulidae       setophaga
-## 205         passeriformes         parulidae       setophaga
-## 206         passeriformes         parulidae       setophaga
-## 207         passeriformes         parulidae       setophaga
-## 208         passeriformes         parulidae       setophaga
-## 209         passeriformes         parulidae        wilsonia
-## 210         passeriformes    phylloscopidae    phylloscopus
-## 211         passeriformes ptilonorhynchidae    scenopoeetes
-## 212         passeriformes         regulidae         regulus
-## 213         passeriformes         regulidae         regulus
-## 214         passeriformes         stittidae           sitta
-## 215         passeriformes          sylvidae         chamaea
-## 216         passeriformes         sylviidae          sylvia
-## 217         passeriformes         sylviidae          sylvia
-## 218         passeriformes     troglodytidae      thryomanes
-## 219         passeriformes     troglodytidae     thryothorus
-## 220         passeriformes     troglodytidae     troglodytes
-## 221         passeriformes     troglodytidae     troglodytes
-## 222         passeriformes          turdidae          sialia
-## 223         passeriformes        tyrannidae        contopus
-## 224         passeriformes        tyrannidae       empidonax
-## 225         passeriformes        tyrannidae       empidonax
-## 226         passeriformes        tyrannidae        tyrannus
-## 227         passeriformes        vireonidae           vireo
-## 228         passeriformes        vireonidae           vireo
-## 229         passeriformes        vireonidae           vireo
-## 230         passeriformes        vireonidae           vireo
-## 231        pelecaniformes          ardeidae        botaurus
-## 232        pelecaniformes          ardeidae      ixobrychus
-## 233            piciformes           picidae       dryocopus
-## 234            piciformes           picidae            jynx
-## 235            piciformes           picidae        picoides
-## 236            piciformes           picidae        picoides
-## 237            piciformes           picidae        picoides
-## 238            piciformes           picidae           picus
-## 239            piciformes           picidae           picus
-## 240        psittaciformes       strigopidae        strigops
-## 241            rheiformes           rheidae            rhea
-## 242            rheiformes           rheidae            rhea
-## 243          strigiformes         strigidae        aegolius
-## 244          strigiformes         strigidae            asio
-## 245          strigiformes         strigidae          athene
-## 246          strigiformes         strigidae            bubo
-## 247          strigiformes         strigidae            bubo
-## 248          strigiformes         strigidae      glaucidium
-## 249          strigiformes         strigidae          nyctea
-## 250          strigiformes         strigidae           strix
-## 251          strigiformes         tytonidae            tyto
-## 252      struthioniformes     struthionidae        struthio
-## 253          tinamiformes         tinamidae     nothoprocta
-## 254          afrosoricida   chrysochloridae    chrysospalax
-## 255          afrosoricida   chrysochloridae      eremitalpa
-## 256          artiodactyla    antilocapridae     antilocapra
-## 257          artiodactyla           bovidae       aepyceros
-## 258          artiodactyla           bovidae      alcelaphus
-## 259          artiodactyla           bovidae      ammotragus
-## 260          artiodactyla           bovidae           bison
-## 261          artiodactyla           bovidae           bison
-## 262          artiodactyla           bovidae           capra
-## 263          artiodactyla           bovidae           capra
-## 264          artiodactyla           bovidae     cephalophus
-## 265          artiodactyla           bovidae     cephalophus
-## 266          artiodactyla           bovidae         gazella
-## 267          artiodactyla           bovidae         madoqua
-## 268          artiodactyla           bovidae        oreamnos
-## 269          artiodactyla           bovidae            ovis
-## 270          artiodactyla           bovidae            ovis
-## 271          artiodactyla           bovidae      raphicerus
-## 272          artiodactyla           bovidae       rupicapra
-## 273          artiodactyla           bovidae     taurotragus
-## 274          artiodactyla           bovidae     tragelaphus
-## 275          artiodactyla           bovidae     tragelaphus
-## 276          artiodactyla          cervidae           alces
-## 277          artiodactyla          cervidae            axis
-## 278          artiodactyla          cervidae       capreolus
-## 279          artiodactyla          cervidae          cervus
-## 280          artiodactyla          cervidae          cervus
-## 281          artiodactyla          cervidae            dama
-## 282          artiodactyla          cervidae       muntiacus
-## 283          artiodactyla          cervidae      odocoileus
-## 284          artiodactyla          cervidae      odocoileus
-## 285          artiodactyla          cervidae      ozotoceros
-## 286          artiodactyla          cervidae            pudu
-## 287          artiodactyla          cervidae        rangifer
-## 288          artiodactyla        giraffidae         giraffa
-## 289          artiodactyla        giraffidae          okapia
-## 290          artiodactyla            suidae    phacochoerus
-## 291          artiodactyla       tayassuidae       catagonus
-## 292          artiodactyla       tayassuidae          pecari
-## 293          artiodactyla       tayassuidae         tayassu
-## 294          artiodactyla        tragulidae      hyemoschus
-## 295             carnivora         ailuridae         ailurus
-## 296             carnivora           canidae          alopex
-## 297             carnivora           canidae           canis
-## 298             carnivora           canidae     pseudalopex
-## 299             carnivora           canidae     pseudalopex
-## 300             carnivora           canidae          vulpes
-## 301             carnivora           canidae          vulpes
-## 302             carnivora           canidae          vulpes
-## 303             carnivora         dipodidae      stylodipus
-## 304             carnivora        eupleridae    cryptoprocta
-## 305             carnivora           felidae        acinonyx
-## 306             carnivora           felidae         caracal
-## 307             carnivora           felidae           felis
-## 308             carnivora           felidae           felis
-## 309             carnivora           felidae     herpailurus
-## 310             carnivora           felidae       leopardus
-## 311             carnivora           felidae       leopardus
-## 312             carnivora           felidae     leptailurus
-## 313             carnivora           felidae            lynx
-## 314             carnivora           felidae            lynx
-## 315             carnivora           felidae            lynx
-## 316             carnivora           felidae            lynx
-## 317             carnivora           felidae       oncifelis
-## 318             carnivora           felidae        panthera
-## 319             carnivora           felidae        panthera
-## 320             carnivora           felidae        panthera
-## 321             carnivora           felidae    prionailurus
-## 322             carnivora           felidae            puma
-## 323             carnivora           felidae           uncia
-## 324             carnivora       herpestidae          atilax
-## 325             carnivora       herpestidae        cynictis
-## 326             carnivora       herpestidae        helogale
-## 327             carnivora       herpestidae       herpestes
-## 328             carnivora       herpestidae       ichneumia
-## 329             carnivora          hyanidae        proteles
-## 330             carnivora        mustelidae            eira
-## 331             carnivora        mustelidae        galictis
-## 332             carnivora        mustelidae            gulo
-## 333             carnivora        mustelidae          martes
-## 334             carnivora        mustelidae          martes
-## 335             carnivora        mustelidae          martes
-## 336             carnivora        mustelidae          martes
-## 337             carnivora        mustelidae         mustela
-## 338             carnivora        mustelidae         mustela
-## 339             carnivora        mustelidae         mustela
-## 340             carnivora        mustelidae         mustela
-## 341             carnivora        mustelidae         mustela
-## 342             carnivora        mustelidae         mustela
-## 343             carnivora        mustelidae         mustela
-## 344             carnivora        mustelidae         taxidea
-## 345             carnivora       procyonidae           potos
-## 346             carnivora           ursidae      ailuropoda
-## 347             carnivora           ursidae        melursus
-## 348             carnivora        viverridae         genetta
-## 349             carnivora        viverridae         genetta
-## 350             carnivora        viverridae         viverra
-## 351         dasyuromorpha        dasyuridae        dasyurus
-## 352         dasyuromorpha        dasyuridae        dasyurus
-## 353         dasyuromorpha        dasyuridae     sminthopsis
-## 354         dasyuromorpia        dasyuridae      antechinus
-## 355       didelphimorphia       didelphidae     monodelphis
-## 356       didelphimorphia       didelphidae        thylamys
-## 357           diprodontia      macropodidae     dendrolagus
-## 358           diprodontia      macropodidae        macropus
-## 359           diprodontia      macropodidae        macropus
-## 360           diprodontia      macropodidae        macropus
-## 361           diprodontia      macropodidae        macropus
-## 362           diprodontia      macropodidae        macropus
-## 363           diprodontia      macropodidae        macropus
-## 364           diprodontia      macropodidae        macropus
-## 365           diprodontia      macropodidae       petrogale
-## 366           diprodontia        potoroidae       bettongia
-## 367           diprodontia        potoroidae        potorous
-## 368           diprodontia   pseudocheiridae     petauroides
-## 369         diprotodontia      macropodidae     onychogalea
-## 370         diprotodontia      macropodidae       thylogale
-## 371         diprotodontia      macropodidae       thylogale
-## 372         diprotodontia      macropodidae        wallabia
-## 373         diprotodontia     phalangeridae     trichosurus
-## 374         diprotodontia        vombatidae     lasiorhinus
-## 375         diprotodontia        vombatidae        vombatus
-## 376        erinaceomorpha       erinaceidae       erinaceus
-## 377        erinaceomorpha       erinaceidae     hemiechinus
-## 378            lagomorpha         leporidae     brachylagus
-## 379            lagomorpha         leporidae           lepus
-## 380            lagomorpha         leporidae           lepus
-## 381            lagomorpha         leporidae           lepus
-## 382            lagomorpha         leporidae           lepus
-## 383            lagomorpha         leporidae           lepus
-## 384            lagomorpha         leporidae           lepus
-## 385            lagomorpha         leporidae           lepus
-## 386            lagomorpha         leporidae     oryctolagus
-## 387            lagomorpha         leporidae      sylvilagus
-## 388            lagomorpha         leporidae      sylvilagus
-## 389            lagomorpha         leporidae      sylvilagus
-## 390            lagomorpha       ochotonidae        ochotona
-## 391            lagomorpha       ochotonidae        ochotona
-## 392         macroscelidea   macroscelididae    elephantulus
-## 393         macroscelidea   macroscelididae     petrodromus
-## 394         macroscelidea   macroscelididae     rhynchocyon
-## 395          monotrematae    tachyglossidae    tachyoryctes
-## 396       peramelemorphia       peramelidae         isoodon
-## 397       peramelemorphia       peramelidae         isoodon
-## 398        perissodactyla           equidae           equus
-## 399        perissodactyla    rhinocerotidae   ceratotherium
-## 400        perissodactyla    rhinocerotidae         diceros
-## 401                pilosa      bradypodidae        bradypus
-## 402           proboscidea      elephantidae         elephas
-## 403           proboscidea      elephantidae       loxodonta
-## 404                 roden        cricetidae       onychomys
-## 405              rodentia     aplodontiidae      aplodontia
-## 406              rodentia      bathyergidae      bathyergus
-## 407              rodentia      bathyergidae       cryptomys
-## 408              rodentia      bathyergidae       cryptomys
-## 409              rodentia      bathyergidae       georychus
-## 410              rodentia      bathyergidae    heliophobius
-## 411              rodentia      bathyergidae  heterocephalus
-## 412              rodentia          caviidae      dolichotus
-## 413              rodentia     chinchillidae      lagostomus
-## 414              rodentia        cricetidae   clethrionomys
-## 415              rodentia        cricetidae       hylaeamys
-## 416              rodentia        cricetidae          lemmus
-## 417              rodentia        cricetidae        microtus
-## 418              rodentia        cricetidae        microtus
-## 419              rodentia        cricetidae        microtus
-## 420              rodentia        cricetidae        microtus
-## 421              rodentia        cricetidae        microtus
-## 422              rodentia        cricetidae        microtus
-## 423              rodentia        cricetidae        microtus
-## 424              rodentia        cricetidae          myopus
-## 425              rodentia        cricetidae         neotoma
-## 426              rodentia        cricetidae         neotoma
-## 427              rodentia        cricetidae         neotoma
-## 428              rodentia        cricetidae         neotoma
-## 429              rodentia        cricetidae         ondatra
-## 430              rodentia        cricetidae      peromyscus
-## 431              rodentia        cricetidae reithrodontomys
-## 432              rodentia        cricetidae      synaptomys
-## 433              rodentia         dipodidae      pygeretmus
-## 434              rodentia        echimyidae      proechimys
-## 435              rodentia        echimyidae      proechimys
-## 436              rodentia    erethizontidae         coendou
-## 437              rodentia    erethizontidae       erethizon
-## 438              rodentia         geomyidae        thomomys
-## 439              rodentia          gliridae      graphiurus
-## 440              rodentia          gliridae     muscardinus
-## 441              rodentia      heteromyidae       dipodomys
-## 442              rodentia      heteromyidae       dipodomys
-## 443              rodentia      heteromyidae       dipodomys
-## 444              rodentia      heteromyidae       dipodomys
-## 445              rodentia      heteromyidae       dipodomys
-## 446              rodentia       hystricidae         hystrix
-## 447              rodentia       hystricidae         hystrix
-## 448              rodentia       hystridicae       atherurus
-## 449              rodentia           muridae        apodemus
-## 450              rodentia           muridae        apodemus
-## 451              rodentia           muridae        meriones
-## 452              rodentia           muridae       pseudomys
-## 453              rodentia        nesomyidae      hypogeomys
-## 454              rodentia        nesomyidae         nesomys
-## 455              rodentia        nesomyidae         nesomys
-## 456              rodentia      octodontidae      spalacopus
-## 457              rodentia         sciuridae        eutamias
-## 458              rodentia         sciuridae      funambulus
-## 459              rodentia         sciuridae       glaucomys
-## 460              rodentia         sciuridae       glaucomys
-## 461              rodentia         sciuridae         marmota
-## 462              rodentia         sciuridae         marmota
-## 463              rodentia         sciuridae       paraxerus
-## 464              rodentia         sciuridae         sciurus
-## 465              rodentia         sciuridae         sciurus
-## 466              rodentia         sciuridae         sciurus
-## 467              rodentia         sciuridae         sciurus
-## 468              rodentia         sciuridae         sciurus
-## 469              rodentia         sciuridae    spermophilus
-## 470              rodentia         sciuridae    spermophilus
-## 471              rodentia         sciuridae    spermophilus
-## 472              rodentia         sciuridae    spermophilus
-## 473              rodentia         sciuridae    spermophilus
-## 474              rodentia         sciuridae    spermophilus
-## 475              rodentia         sciuridae    spermophilus
-## 476              rodentia         sciuridae          tamias
-## 477              rodentia         sciuridae          tamias
-## 478              rodentia         sciuridae          tamias
-## 479              rodentia         sciuridae          tamias
-## 480              rodentia         sciuridae    tamiasciurus
-## 481              rodentia         sciuridae           xerus
-## 482          soricomorpha         soricidae       crocidura
-## 483          soricomorpha         soricidae           sorex
-## 484          soricomorpha         soricidae           sorex
-## 485          soricomorpha         soricidae           sorex
-## 486          soricomorpha         soricidae           sorex
-## 487          soricomorpha         soricidae           sorex
-## 488          soricomorpha          talpidae       condylura
-## 489          soricomorpha          talpidae        scalopus
-## 490          soricomorpha          talpidae           talpa
-## 491          soricomorpha          talpidae           talpa
-## 492              squamata          agamidae       uromastyx
-## 493              squamata        colubridae       carphopis
-## 494              squamata        colubridae       carphopis
-## 495              squamata        colubridae         coluber
-## 496              squamata        colubridae         coluber
-## 497              squamata        colubridae       diadophis
-## 498              squamata        colubridae      drymarchon
-## 499              squamata        colubridae          elaphe
-## 500              squamata        colubridae          elaphe
-## 501              squamata        colubridae       heterodon
-## 502              squamata        colubridae       hierophis
-## 503              squamata        colubridae    lampropeltis
-## 504              squamata        colubridae    lampropeltis
-## 505              squamata        colubridae     masticophis
-## 506              squamata        colubridae          natrix
-## 507              squamata        colubridae         nerodia
-## 508              squamata        colubridae         nerodia
-## 509              squamata        colubridae      oocatochus
-## 510              squamata        colubridae       pituophis
-## 511              squamata        colubridae       pituophis
-## 512              squamata        colubridae      thamnophis
-## 513              squamata        colubridae      thamnophis
-## 514              squamata        colubridae         zamenis
-## 515              squamata          elapidae   hoplocephalus
-## 516              squamata          elapidae        notechis
-## 517              squamata          elapidae      pseudechis
-## 518              squamata         iguanidae      conolophus
-## 519              squamata         iguanidae         cyclura
-## 520              squamata         iguanidae         cyclura
-## 521              squamata         iguanidae         cyclura
-## 522              squamata         iguanidae      sauromalus
-## 523              squamata         iguanidae      sauromalus
-## 524              squamata        lacertilia     dipsosaurus
-## 525              squamata        lacertilia        gallotia
-## 526              squamata       liolaemidae      phymaturus
-## 527              squamata        pythonidae         morelia
-## 528              squamata         scincidae         egernia
-## 529              squamata         viperidae     agkistrodon
-## 530              squamata         viperidae     agkistrodon
-## 531              squamata         viperidae           bitis
-## 532              squamata         viperidae        bothrops
-## 533              squamata         viperidae        crotalus
-## 534              squamata         viperidae        crotalus
-## 535              squamata         viperidae        crotalus
-## 536              squamata         viperidae        crotalus
-## 537              squamata         viperidae        crotalus
-## 538              squamata         viperidae        crotalus
-## 539              squamata         viperidae        crotalus
-## 540              squamata         viperidae        crotalus
-## 541              squamata         viperidae        gloydius
-## 542              squamata         viperidae     montivipera
-## 543              squamata         viperidae          vipera
-## 544            testudines          chelidae       chelodina
-## 545            testudines          chelidae     mesoclemmys
-## 546            testudines       chelydridae        chelydra
-## 547            testudines          emydidae       chrysemys
-## 548            testudines          emydidae     deirochelys
-## 549            testudines          emydidae       emydoidea
-## 550            testudines          emydidae            emys
-## 551            testudines          emydidae       graptemys
-## 552            testudines          emydidae       terrapene
-## 553            testudines       geoemydidae        mauremys
-## 554            testudines     kinosternidae     kinosternon
-## 555            testudines     kinosternidae    sternotherus
-## 556            testudines     kinosternidae    sternotherus
-## 557            testudines      testudinidae      geochelone
-## 558            testudines      testudinidae        gopherus
-## 559            testudines      testudinidae        gopherus
-## 560            testudines      testudinidae     indotestudo
-## 561            testudines      testudinidae         kinixys
-## 562            testudines      testudinidae        manouria
-## 563            testudines      testudinidae     psammobates
-## 564            testudines      testudinidae    stigmochelys
-## 565            testudines      testudinidae         testudo
-## 566            testudines      testudinidae         testudo
-## 567            testudines      testudinidae         testudo
-## 568            testudines      testudinidae         testudo
-## 569            testudines      trionychidae         apalone
+##                         order            family              genus
+## 1              anguilliformes       anguillidae           anguilla
+## 2               cypriniformes      catostomidae          moxostoma
+## 3               cypriniformes        cyprinidae         campostoma
+## 4               cypriniformes        cyprinidae        clinostomus
+## 5               cypriniformes        cyprinidae        rhinichthys
+## 6                 esociformes          esocidae               esox
+## 7                  gadiformes           gadidae         pollachius
+## 8                  gadiformes           gadidae         pollachius
+## 9                 perciformes      acanthuridae         acanthurus
+## 10                perciformes      acanthuridae               naso
+## 11                perciformes      acanthuridae               naso
+## 12                perciformes         blennidae      ophioblennius
+## 13                perciformes        carangidae             caranx
+## 14                perciformes     centrarchidae        ambloplites
+## 15                perciformes     centrarchidae            lepomis
+## 16                perciformes     centrarchidae            lepomis
+## 17                perciformes     centrarchidae            lepomis
+## 18                perciformes     centrarchidae        micropterus
+## 19                perciformes     centrarchidae        micropterus
+## 20                perciformes     centrarchidae            pomoxis
+## 21                perciformes    chaetodontidae          chaetodon
+## 22                perciformes    chaetodontidae          chaetodon
+## 23                perciformes    chaetodontidae          chaetodon
+## 24                perciformes    chaetodontidae          chaetodon
+## 25                perciformes    chaetodontidae          chaetodon
+## 26                perciformes  cheilodactylidae     cheilodactylus
+## 27                perciformes       cirrhitidae     amblycirrhitus
+## 28                perciformes       cirrhitidae     cirrhitichthys
+## 29                perciformes          cottidae    scorpaenichthys
+## 30                perciformes          gobiidae      amblyeleotris
+## 31                perciformes          gobiidae         lythrypnus
+## 32                perciformes          gobiidae          priolepis
+## 33                perciformes          gobiidae       rhinogobiops
+## 34                perciformes          gobiidae       valenciennea
+## 35                perciformes        kyphosidae           kyphosus
+## 36                perciformes          labridae           bodianus
+## 37                perciformes          labridae           chelinus
+## 38                perciformes          labridae              coris
+## 39                perciformes          labridae        halichoeres
+## 40                perciformes          labridae        halichoeres
+## 41                perciformes          labridae        halichoeres
+## 42                perciformes          labridae        halichoeres
+## 43                perciformes          labridae          labroides
+## 44                perciformes          labridae             labrus
+## 45                perciformes          labridae      opthalmolepis
+## 46                perciformes          labridae      semicossyphus
+## 47                perciformes          labridae      tautogolabrus
+## 48                perciformes          labridae         thalassoma
+## 49                perciformes          labridae         thalassoma
+## 50                perciformes       lethrinidae          lethrinus
+## 51                perciformes        lutjanidae           lutjanus
+## 52                perciformes        lutjanidae           lutjanus
+## 53                perciformes        lutjanidae           lutjanus
+## 54                perciformes        lutjanidae           lutjanus
+## 55                perciformes        lutjanidae            ocyurus
+## 56                perciformes     malacanthidae       caulolatilus
+## 57                perciformes         moronidae      dicentrarchus
+## 58                perciformes          mullidae     mulloidichthys
+## 59                perciformes          mullidae         parupeneus
+## 60                perciformes          percidae              perca
+## 61                perciformes     pomacanthidae          abudefduf
+## 62                perciformes     pomacanthidae         centropyge
+## 63                perciformes     pomacentridae            chromis
+## 64                perciformes     pomacentridae        chrysiptera
+## 65                perciformes     pomacentridae          dascyllus
+## 66                perciformes     pomacentridae        pomacentrus
+## 67                perciformes     pomacentridae          stegastes
+## 68                perciformes     pomacentridae          stegastes
+## 69                perciformes     pomacentridae          stegastes
+## 70                perciformes          scaridae          chlorurus
+## 71                perciformes          scaridae             scarus
+## 72                perciformes          scaridae             scarus
+## 73                perciformes          scaridae          sparisoma
+## 74                perciformes          scaridae          sparisoma
+## 75                perciformes          scaridae          sparisoma
+## 76                perciformes          scaridae          sparisoma
+## 77                perciformes        serranidae      cephalopholis
+## 78                perciformes        serranidae      cephalopholis
+## 79                perciformes        serranidae      cephalopholis
+## 80                perciformes        serranidae      cephalopholis
+## 81                perciformes        serranidae        epinephelus
+## 82                perciformes        serranidae        epinephelus
+## 83                perciformes        serranidae        epinephelus
+## 84                perciformes        serranidae        epinephelus
+## 85                perciformes        serranidae        epinephelus
+## 86                perciformes        serranidae     hypoplectrodes
+## 87                perciformes        serranidae     hypoplectrodes
+## 88                perciformes        serranidae       mycteroperca
+## 89                perciformes        serranidae         paralabrax
+## 90                perciformes        serranidae         paralabrax
+## 91                perciformes        serranidae       plectropomus
+## 92                perciformes        serranidae       plectropomus
+## 93                perciformes        serranidae           serranus
+## 94                perciformes        serranidae           serranus
+## 95                perciformes          sparidae              sarpa
+## 96                perciformes          sparidae             sparus
+## 97              salmoniformes        salmonidae       oncorhynchus
+## 98              salmoniformes        salmonidae       oncorhynchus
+## 99              salmoniformes        salmonidae       oncorhynchus
+## 100             salmoniformes        salmonidae              salmo
+## 101             salmoniformes        salmonidae              salmo
+## 102           scorpaeniformes          cottidae             cottus
+## 103           scorpaeniformes          cottidae             cottus
+## 104           scorpaeniformes          cottidae             cottus
+## 105           scorpaeniformes        sebastidae           sebastes
+## 106           scorpaeniformes        sebastidae           sebastes
+## 107           scorpaeniformes        sebastidae           sebastes
+## 108           scorpaeniformes        sebastidae           sebastes
+## 109           scorpaeniformes        sebastidae           sebastes
+## 110              siluriformes       ictaluridae          ictalurus
+## 111           syngnathiformes      syngnathidae        hippocampus
+## 112           syngnathiformes      syngnathidae           nerophis
+## 113 tetraodontiformes<U+00A0>    tetraodontidae       canthigaster
+## 114           accipitriformes      accipitridae             aquila
+## 115           accipitriformes      accipitridae              buteo
+## 116           accipitriformes      accipitridae          circaetus
+## 117           accipitriformes      accipitridae         hieraaetus
+## 118           accipitriformes      accipitridae         hieraaetus
+## 119           accipitriformes      accipitridae           neophron
+## 120              anseriformes          anatidae               anas
+## 121            apterygiformes       apterygidae            apteryx
+## 122          caprimulgiformes     caprimulgidae        caprimulgus
+## 123           charadriiformes    haematopodidae         haematopus
+## 124             columbidormes        columbidae        scardafella
+## 125             columbiformes        columbidae            columba
+## 126             columbiformes        columbidae       streptopelia
+## 127             coraciiformes        coraciidae           coracias
+## 128             coraciiformes          upupidae              upupa
+## 129              cuculiformes         cuculidae           clamator
+## 130              cuculiformes         cuculidae            cuculus
+## 131              cuculiformes         cuculidae          geococcyx
+## 132              cuculiformes         cuculidae        neopmorphus
+## 133             falconiformes      accipitridae          accipiter
+## 134             falconiformes      accipitridae          accipiter
+## 135             falconiformes      accipitridae          accipiter
+## 136             falconiformes      accipitridae          accipiter
+## 137             falconiformes      accipitridae              buteo
+## 138             falconiformes      accipitridae              buteo
+## 139             falconiformes      accipitridae              buteo
+## 140             falconiformes      accipitridae             circus
+## 141             falconiformes      accipitridae             circus
+## 142             falconiformes      accipitridae             milvus
+## 143             falconiformes        falconidae           caracara
+## 144             falconiformes        falconidae           daptrius
+## 145             falconiformes        falconidae              falco
+## 146             falconiformes        falconidae              falco
+## 147             falconiformes        falconidae              falco
+## 148             falconiformes        falconidae              falco
+## 149             falconiformes        falconidae              falco
+## 150               galliformes       phasianidae             bonasa
+## 151               galliformes       phasianidae       centrocercus
+## 152               galliformes       phasianidae        dendragapus
+## 153               galliformes       phasianidae            lagopus
+## 154               galliformes       phasianidae             perdix
+## 155               galliformes       phasianidae             tetrao
+## 156               galliformes       phasianidae             tetrao
+## 157               galliformes       phasianidae        typmanuchus
+## 158                gruiformes          rallidae           aramides
+## 159                gruiformes          rallidae               crex
+## 160                gruiformes          rallidae             rallus
+## 161             passeriformes    acrocephalisae          hippolais
+## 162             passeriformes      aegithalidae         aegithalos
+## 163             passeriformes         alaudidae            lululla
+## 164             passeriformes      cardinalidae              habia
+## 165             passeriformes      cardinalidae              habia
+## 166             passeriformes         certhidae            certhia
+## 167             passeriformes      cisticolidae          cisticola
+## 168             passeriformes          corvidae             corvus
+## 169             passeriformes          corvidae          nucifraga
+## 170             passeriformes        cotingidae          phytotoma
+## 171             passeriformes       emberizidae         ammodramus
+## 172             passeriformes       emberizidae          passerina
+## 173             passeriformes       emberizidae             pipilo
+## 174             passeriformes       emberizidae             pipilo
+## 175             passeriformes       emberizidae           spizella
+## 176             passeriformes       emberizidae           spizella
+## 177             passeriformes      fringillidae          carduelis
+## 178             passeriformes      fringillidae          fringilla
+## 179             passeriformes      fringillidae            serinus
+## 180             passeriformes         icteridae          sturnella
+## 181             passeriformes         icteridae          sturnella
+## 182             passeriformes          incertae            icteria
+## 183             passeriformes          laniidae            laniuis
+## 184             passeriformes          laniidae            laniuis
+## 185             passeriformes          laniidae             lanius
+## 186             passeriformes          laniidae             lanius
+## 187             passeriformes           mimidae              mimus
+## 188             passeriformes      motacillidae          motacilla
+## 189             passeriformes      motacillidae          motacilla
+## 190             passeriformes      muscicapidae          muscicapa
+## 191             passeriformes      muscicapidae           oenanthe
+## 192             passeriformes      muscicapidae        phoenicurus
+## 193             passeriformes      muscicapidae           saxicola
+## 194             passeriformes           paridae              parus
+## 195             passeriformes           paridae              parus
+## 196             passeriformes           paridae              parus
+## 197             passeriformes           paridae              parus
+## 198             passeriformes         parulidae geothlypis<U+00A0>
+## 199             passeriformes         parulidae         geothylpis
+## 200             passeriformes         parulidae       protonotaria
+## 201             passeriformes         parulidae            seiurus
+## 202             passeriformes         parulidae          setophaga
+## 203             passeriformes         parulidae          setophaga
+## 204             passeriformes         parulidae          setophaga
+## 205             passeriformes         parulidae          setophaga
+## 206             passeriformes         parulidae          setophaga
+## 207             passeriformes         parulidae          setophaga
+## 208             passeriformes         parulidae          setophaga
+## 209             passeriformes         parulidae           wilsonia
+## 210             passeriformes    phylloscopidae       phylloscopus
+## 211             passeriformes ptilonorhynchidae       scenopoeetes
+## 212             passeriformes         regulidae            regulus
+## 213             passeriformes         regulidae            regulus
+## 214             passeriformes         stittidae              sitta
+## 215             passeriformes          sylvidae            chamaea
+## 216             passeriformes         sylviidae             sylvia
+## 217             passeriformes         sylviidae             sylvia
+## 218             passeriformes     troglodytidae         thryomanes
+## 219             passeriformes     troglodytidae        thryothorus
+## 220             passeriformes     troglodytidae        troglodytes
+## 221             passeriformes     troglodytidae        troglodytes
+## 222             passeriformes          turdidae             sialia
+## 223             passeriformes        tyrannidae           contopus
+## 224             passeriformes        tyrannidae          empidonax
+## 225             passeriformes        tyrannidae          empidonax
+## 226             passeriformes        tyrannidae           tyrannus
+## 227             passeriformes        vireonidae              vireo
+## 228             passeriformes        vireonidae              vireo
+## 229             passeriformes        vireonidae              vireo
+## 230             passeriformes        vireonidae              vireo
+## 231            pelecaniformes          ardeidae           botaurus
+## 232            pelecaniformes          ardeidae         ixobrychus
+## 233                piciformes           picidae          dryocopus
+## 234                piciformes           picidae               jynx
+## 235                piciformes           picidae           picoides
+## 236                piciformes           picidae           picoides
+## 237                piciformes           picidae           picoides
+## 238                piciformes           picidae              picus
+## 239                piciformes           picidae              picus
+## 240            psittaciformes       strigopidae           strigops
+## 241                rheiformes           rheidae               rhea
+## 242                rheiformes           rheidae               rhea
+## 243              strigiformes         strigidae           aegolius
+## 244              strigiformes         strigidae               asio
+## 245              strigiformes         strigidae             athene
+## 246              strigiformes         strigidae               bubo
+## 247              strigiformes         strigidae               bubo
+## 248              strigiformes         strigidae         glaucidium
+## 249              strigiformes         strigidae             nyctea
+## 250              strigiformes         strigidae              strix
+## 251              strigiformes         tytonidae               tyto
+## 252          struthioniformes     struthionidae           struthio
+## 253              tinamiformes         tinamidae        nothoprocta
+## 254              afrosoricida   chrysochloridae       chrysospalax
+## 255              afrosoricida   chrysochloridae         eremitalpa
+## 256              artiodactyla    antilocapridae        antilocapra
+## 257              artiodactyla           bovidae          aepyceros
+## 258              artiodactyla           bovidae         alcelaphus
+## 259              artiodactyla           bovidae         ammotragus
+## 260              artiodactyla           bovidae              bison
+## 261              artiodactyla           bovidae              bison
+## 262              artiodactyla           bovidae              capra
+## 263              artiodactyla           bovidae              capra
+## 264              artiodactyla           bovidae        cephalophus
+## 265              artiodactyla           bovidae        cephalophus
+## 266              artiodactyla           bovidae            gazella
+## 267              artiodactyla           bovidae            madoqua
+## 268              artiodactyla           bovidae           oreamnos
+## 269              artiodactyla           bovidae               ovis
+## 270              artiodactyla           bovidae               ovis
+## 271              artiodactyla           bovidae         raphicerus
+## 272              artiodactyla           bovidae          rupicapra
+## 273              artiodactyla           bovidae        taurotragus
+## 274              artiodactyla           bovidae        tragelaphus
+## 275              artiodactyla           bovidae        tragelaphus
+## 276              artiodactyla          cervidae              alces
+## 277              artiodactyla          cervidae               axis
+## 278              artiodactyla          cervidae          capreolus
+## 279              artiodactyla          cervidae             cervus
+## 280              artiodactyla          cervidae             cervus
+## 281              artiodactyla          cervidae               dama
+## 282              artiodactyla          cervidae          muntiacus
+## 283              artiodactyla          cervidae         odocoileus
+## 284              artiodactyla          cervidae         odocoileus
+## 285              artiodactyla          cervidae         ozotoceros
+## 286              artiodactyla          cervidae               pudu
+## 287              artiodactyla          cervidae           rangifer
+## 288              artiodactyla        giraffidae            giraffa
+## 289              artiodactyla        giraffidae             okapia
+## 290              artiodactyla            suidae       phacochoerus
+## 291              artiodactyla       tayassuidae          catagonus
+## 292              artiodactyla       tayassuidae             pecari
+## 293              artiodactyla       tayassuidae            tayassu
+## 294              artiodactyla        tragulidae         hyemoschus
+## 295                 carnivora         ailuridae            ailurus
+## 296                 carnivora           canidae             alopex
+## 297                 carnivora           canidae              canis
+## 298                 carnivora           canidae        pseudalopex
+## 299                 carnivora           canidae        pseudalopex
+## 300                 carnivora           canidae             vulpes
+## 301                 carnivora           canidae             vulpes
+## 302                 carnivora           canidae             vulpes
+## 303                 carnivora         dipodidae         stylodipus
+## 304                 carnivora        eupleridae       cryptoprocta
+## 305                 carnivora           felidae           acinonyx
+## 306                 carnivora           felidae            caracal
+## 307                 carnivora           felidae              felis
+## 308                 carnivora           felidae              felis
+## 309                 carnivora           felidae        herpailurus
+## 310                 carnivora           felidae          leopardus
+## 311                 carnivora           felidae          leopardus
+## 312                 carnivora           felidae        leptailurus
+## 313                 carnivora           felidae               lynx
+## 314                 carnivora           felidae               lynx
+## 315                 carnivora           felidae               lynx
+## 316                 carnivora           felidae               lynx
+## 317                 carnivora           felidae          oncifelis
+## 318                 carnivora           felidae           panthera
+## 319                 carnivora           felidae           panthera
+## 320                 carnivora           felidae           panthera
+## 321                 carnivora           felidae       prionailurus
+## 322                 carnivora           felidae               puma
+## 323                 carnivora           felidae              uncia
+## 324                 carnivora       herpestidae             atilax
+## 325                 carnivora       herpestidae           cynictis
+## 326                 carnivora       herpestidae           helogale
+## 327                 carnivora       herpestidae          herpestes
+## 328                 carnivora       herpestidae          ichneumia
+## 329                 carnivora          hyanidae           proteles
+## 330                 carnivora        mustelidae               eira
+## 331                 carnivora        mustelidae           galictis
+## 332                 carnivora        mustelidae               gulo
+## 333                 carnivora        mustelidae             martes
+## 334                 carnivora        mustelidae             martes
+## 335                 carnivora        mustelidae             martes
+## 336                 carnivora        mustelidae             martes
+## 337                 carnivora        mustelidae            mustela
+## 338                 carnivora        mustelidae            mustela
+## 339                 carnivora        mustelidae            mustela
+## 340                 carnivora        mustelidae            mustela
+## 341                 carnivora        mustelidae            mustela
+## 342                 carnivora        mustelidae            mustela
+## 343                 carnivora        mustelidae            mustela
+## 344                 carnivora        mustelidae            taxidea
+## 345                 carnivora       procyonidae              potos
+## 346                 carnivora           ursidae         ailuropoda
+## 347                 carnivora           ursidae           melursus
+## 348                 carnivora        viverridae            genetta
+## 349                 carnivora        viverridae            genetta
+## 350                 carnivora        viverridae            viverra
+## 351             dasyuromorpha        dasyuridae           dasyurus
+## 352             dasyuromorpha        dasyuridae           dasyurus
+## 353             dasyuromorpha        dasyuridae        sminthopsis
+## 354             dasyuromorpia        dasyuridae         antechinus
+## 355           didelphimorphia       didelphidae        monodelphis
+## 356           didelphimorphia       didelphidae           thylamys
+## 357               diprodontia      macropodidae        dendrolagus
+## 358               diprodontia      macropodidae           macropus
+## 359               diprodontia      macropodidae           macropus
+## 360               diprodontia      macropodidae           macropus
+## 361               diprodontia      macropodidae           macropus
+## 362               diprodontia      macropodidae           macropus
+## 363               diprodontia      macropodidae           macropus
+## 364               diprodontia      macropodidae           macropus
+## 365               diprodontia      macropodidae          petrogale
+## 366               diprodontia        potoroidae          bettongia
+## 367               diprodontia        potoroidae           potorous
+## 368               diprodontia   pseudocheiridae        petauroides
+## 369             diprotodontia      macropodidae        onychogalea
+## 370             diprotodontia      macropodidae          thylogale
+## 371             diprotodontia      macropodidae          thylogale
+## 372             diprotodontia      macropodidae           wallabia
+## 373             diprotodontia     phalangeridae        trichosurus
+## 374             diprotodontia        vombatidae        lasiorhinus
+## 375             diprotodontia        vombatidae           vombatus
+## 376            erinaceomorpha       erinaceidae          erinaceus
+## 377            erinaceomorpha       erinaceidae        hemiechinus
+## 378                lagomorpha         leporidae        brachylagus
+## 379                lagomorpha         leporidae              lepus
+## 380                lagomorpha         leporidae              lepus
+## 381                lagomorpha         leporidae              lepus
+## 382                lagomorpha         leporidae              lepus
+## 383                lagomorpha         leporidae              lepus
+## 384                lagomorpha         leporidae              lepus
+## 385                lagomorpha         leporidae              lepus
+## 386                lagomorpha         leporidae        oryctolagus
+## 387                lagomorpha         leporidae         sylvilagus
+## 388                lagomorpha         leporidae         sylvilagus
+## 389                lagomorpha         leporidae         sylvilagus
+## 390                lagomorpha       ochotonidae           ochotona
+## 391                lagomorpha       ochotonidae           ochotona
+## 392             macroscelidea   macroscelididae       elephantulus
+## 393             macroscelidea   macroscelididae        petrodromus
+## 394             macroscelidea   macroscelididae        rhynchocyon
+## 395              monotrematae    tachyglossidae       tachyoryctes
+## 396           peramelemorphia       peramelidae            isoodon
+## 397           peramelemorphia       peramelidae            isoodon
+## 398            perissodactyla           equidae              equus
+## 399            perissodactyla    rhinocerotidae      ceratotherium
+## 400            perissodactyla    rhinocerotidae            diceros
+## 401                    pilosa      bradypodidae           bradypus
+## 402               proboscidea      elephantidae            elephas
+## 403               proboscidea      elephantidae          loxodonta
+## 404                     roden        cricetidae          onychomys
+## 405                  rodentia     aplodontiidae         aplodontia
+## 406                  rodentia      bathyergidae         bathyergus
+## 407                  rodentia      bathyergidae          cryptomys
+## 408                  rodentia      bathyergidae          cryptomys
+## 409                  rodentia      bathyergidae          georychus
+## 410                  rodentia      bathyergidae       heliophobius
+## 411                  rodentia      bathyergidae     heterocephalus
+## 412                  rodentia          caviidae         dolichotus
+## 413                  rodentia     chinchillidae         lagostomus
+## 414                  rodentia        cricetidae      clethrionomys
+## 415                  rodentia        cricetidae          hylaeamys
+## 416                  rodentia        cricetidae             lemmus
+## 417                  rodentia        cricetidae           microtus
+## 418                  rodentia        cricetidae           microtus
+## 419                  rodentia        cricetidae           microtus
+## 420                  rodentia        cricetidae           microtus
+## 421                  rodentia        cricetidae           microtus
+## 422                  rodentia        cricetidae           microtus
+## 423                  rodentia        cricetidae           microtus
+## 424                  rodentia        cricetidae             myopus
+## 425                  rodentia        cricetidae            neotoma
+## 426                  rodentia        cricetidae            neotoma
+## 427                  rodentia        cricetidae            neotoma
+## 428                  rodentia        cricetidae            neotoma
+## 429                  rodentia        cricetidae            ondatra
+## 430                  rodentia        cricetidae         peromyscus
+## 431                  rodentia        cricetidae    reithrodontomys
+## 432                  rodentia        cricetidae         synaptomys
+## 433                  rodentia         dipodidae         pygeretmus
+## 434                  rodentia        echimyidae         proechimys
+## 435                  rodentia        echimyidae         proechimys
+## 436                  rodentia    erethizontidae            coendou
+## 437                  rodentia    erethizontidae          erethizon
+## 438                  rodentia         geomyidae           thomomys
+## 439                  rodentia          gliridae         graphiurus
+## 440                  rodentia          gliridae        muscardinus
+## 441                  rodentia      heteromyidae          dipodomys
+## 442                  rodentia      heteromyidae          dipodomys
+## 443                  rodentia      heteromyidae          dipodomys
+## 444                  rodentia      heteromyidae          dipodomys
+## 445                  rodentia      heteromyidae          dipodomys
+## 446                  rodentia       hystricidae            hystrix
+## 447                  rodentia       hystricidae            hystrix
+## 448                  rodentia       hystridicae          atherurus
+## 449                  rodentia           muridae           apodemus
+## 450                  rodentia           muridae           apodemus
+## 451                  rodentia           muridae           meriones
+## 452                  rodentia           muridae          pseudomys
+## 453                  rodentia        nesomyidae         hypogeomys
+## 454                  rodentia        nesomyidae            nesomys
+## 455                  rodentia        nesomyidae            nesomys
+## 456                  rodentia      octodontidae         spalacopus
+## 457                  rodentia         sciuridae           eutamias
+## 458                  rodentia         sciuridae         funambulus
+## 459                  rodentia         sciuridae          glaucomys
+## 460                  rodentia         sciuridae          glaucomys
+## 461                  rodentia         sciuridae            marmota
+## 462                  rodentia         sciuridae            marmota
+## 463                  rodentia         sciuridae          paraxerus
+## 464                  rodentia         sciuridae            sciurus
+## 465                  rodentia         sciuridae            sciurus
+## 466                  rodentia         sciuridae            sciurus
+## 467                  rodentia         sciuridae            sciurus
+## 468                  rodentia         sciuridae            sciurus
+## 469                  rodentia         sciuridae       spermophilus
+## 470                  rodentia         sciuridae       spermophilus
+## 471                  rodentia         sciuridae       spermophilus
+## 472                  rodentia         sciuridae       spermophilus
+## 473                  rodentia         sciuridae       spermophilus
+## 474                  rodentia         sciuridae       spermophilus
+## 475                  rodentia         sciuridae       spermophilus
+## 476                  rodentia         sciuridae             tamias
+## 477                  rodentia         sciuridae             tamias
+## 478                  rodentia         sciuridae             tamias
+## 479                  rodentia         sciuridae             tamias
+## 480                  rodentia         sciuridae       tamiasciurus
+## 481                  rodentia         sciuridae              xerus
+## 482              soricomorpha         soricidae          crocidura
+## 483              soricomorpha         soricidae              sorex
+## 484              soricomorpha         soricidae              sorex
+## 485              soricomorpha         soricidae              sorex
+## 486              soricomorpha         soricidae              sorex
+## 487              soricomorpha         soricidae              sorex
+## 488              soricomorpha          talpidae          condylura
+## 489              soricomorpha          talpidae           scalopus
+## 490              soricomorpha          talpidae              talpa
+## 491              soricomorpha          talpidae              talpa
+## 492                  squamata          agamidae          uromastyx
+## 493                  squamata        colubridae          carphopis
+## 494                  squamata        colubridae          carphopis
+## 495                  squamata        colubridae            coluber
+## 496                  squamata        colubridae            coluber
+## 497                  squamata        colubridae          diadophis
+## 498                  squamata        colubridae         drymarchon
+## 499                  squamata        colubridae             elaphe
+## 500                  squamata        colubridae             elaphe
+## 501                  squamata        colubridae          heterodon
+## 502                  squamata        colubridae          hierophis
+## 503                  squamata        colubridae       lampropeltis
+## 504                  squamata        colubridae       lampropeltis
+## 505                  squamata        colubridae        masticophis
+## 506                  squamata        colubridae             natrix
+## 507                  squamata        colubridae            nerodia
+## 508                  squamata        colubridae            nerodia
+## 509                  squamata        colubridae         oocatochus
+## 510                  squamata        colubridae          pituophis
+## 511                  squamata        colubridae          pituophis
+## 512                  squamata        colubridae         thamnophis
+## 513                  squamata        colubridae         thamnophis
+## 514                  squamata        colubridae            zamenis
+## 515                  squamata          elapidae      hoplocephalus
+## 516                  squamata          elapidae           notechis
+## 517                  squamata          elapidae         pseudechis
+## 518                  squamata         iguanidae         conolophus
+## 519                  squamata         iguanidae            cyclura
+## 520                  squamata         iguanidae            cyclura
+## 521                  squamata         iguanidae            cyclura
+## 522                  squamata         iguanidae         sauromalus
+## 523                  squamata         iguanidae         sauromalus
+## 524                  squamata        lacertilia        dipsosaurus
+## 525                  squamata        lacertilia           gallotia
+## 526                  squamata       liolaemidae         phymaturus
+## 527                  squamata        pythonidae            morelia
+## 528                  squamata         scincidae            egernia
+## 529                  squamata         viperidae        agkistrodon
+## 530                  squamata         viperidae        agkistrodon
+## 531                  squamata         viperidae              bitis
+## 532                  squamata         viperidae           bothrops
+## 533                  squamata         viperidae           crotalus
+## 534                  squamata         viperidae           crotalus
+## 535                  squamata         viperidae           crotalus
+## 536                  squamata         viperidae           crotalus
+## 537                  squamata         viperidae           crotalus
+## 538                  squamata         viperidae           crotalus
+## 539                  squamata         viperidae           crotalus
+## 540                  squamata         viperidae           crotalus
+## 541                  squamata         viperidae           gloydius
+## 542                  squamata         viperidae        montivipera
+## 543                  squamata         viperidae             vipera
+## 544                testudines          chelidae          chelodina
+## 545                testudines          chelidae        mesoclemmys
+## 546                testudines       chelydridae           chelydra
+## 547                testudines          emydidae          chrysemys
+## 548                testudines          emydidae        deirochelys
+## 549                testudines          emydidae          emydoidea
+## 550                testudines          emydidae               emys
+## 551                testudines          emydidae          graptemys
+## 552                testudines          emydidae          terrapene
+## 553                testudines       geoemydidae           mauremys
+## 554                testudines     kinosternidae        kinosternon
+## 555                testudines     kinosternidae       sternotherus
+## 556                testudines     kinosternidae       sternotherus
+## 557                testudines      testudinidae         geochelone
+## 558                testudines      testudinidae           gopherus
+## 559                testudines      testudinidae           gopherus
+## 560                testudines      testudinidae        indotestudo
+## 561                testudines      testudinidae            kinixys
+## 562                testudines      testudinidae           manouria
+## 563                testudines      testudinidae        psammobates
+## 564                testudines      testudinidae       stigmochelys
+## 565                testudines      testudinidae            testudo
+## 566                testudines      testudinidae            testudo
+## 567                testudines      testudinidae            testudo
+## 568                testudines      testudinidae            testudo
+## 569                testudines      trionychidae            apalone
 ##                      species
 ## 1                   rostrata
 ## 2                  poecilura
@@ -2017,14 +2017,7 @@ taxa
 ```
 
 ```
-## Help on topic 'table' was found in the following packages:
-## 
-##   Package               Library
-##   vctrs                 /Library/Frameworks/R.framework/Versions/4.0/Resources/library
-##   base                  /Library/Frameworks/R.framework/Resources/library
-## 
-## 
-## Using the first match ...
+## starting httpd help server ... done
 ```
 
 ```r
@@ -2403,349 +2396,349 @@ meat
 ## 340       turtles        stripe-necked musk turtle       reptilia
 ## 341       turtles                  stinkpot turtle       reptilia
 ## 342       turtles   Eastern spiny softshell turtle       reptilia
-##                     order           family           genus
-## 1          anguilliformes      anguillidae        anguilla
-## 2           cypriniformes     catostomidae       moxostoma
-## 3           cypriniformes       cyprinidae      campostoma
-## 4           cypriniformes       cyprinidae     clinostomus
-## 5           cypriniformes       cyprinidae     rhinichthys
-## 6             esociformes         esocidae            esox
-## 7              gadiformes          gadidae      pollachius
-## 8              gadiformes          gadidae      pollachius
-## 9             perciformes       carangidae          caranx
-## 10            perciformes    centrarchidae     ambloplites
-## 11            perciformes    centrarchidae         lepomis
-## 12            perciformes    centrarchidae         lepomis
-## 13            perciformes    centrarchidae         lepomis
-## 14            perciformes    centrarchidae     micropterus
-## 15            perciformes    centrarchidae     micropterus
-## 16            perciformes    centrarchidae         pomoxis
-## 17            perciformes   chaetodontidae       chaetodon
-## 18            perciformes   chaetodontidae       chaetodon
-## 19            perciformes   chaetodontidae       chaetodon
-## 20            perciformes   chaetodontidae       chaetodon
-## 21            perciformes   chaetodontidae       chaetodon
-## 22            perciformes cheilodactylidae  cheilodactylus
-## 23            perciformes      cirrhitidae  amblycirrhitus
-## 24            perciformes      cirrhitidae  cirrhitichthys
-## 25            perciformes         cottidae scorpaenichthys
-## 26            perciformes         gobiidae   amblyeleotris
-## 27            perciformes         gobiidae      lythrypnus
-## 28            perciformes         gobiidae       priolepis
-## 29            perciformes         gobiidae    rhinogobiops
-## 30            perciformes         gobiidae    valenciennea
-## 31            perciformes         labridae        bodianus
-## 32            perciformes         labridae        chelinus
-## 33            perciformes         labridae           coris
-## 34            perciformes         labridae     halichoeres
-## 35            perciformes         labridae     halichoeres
-## 36            perciformes         labridae     halichoeres
-## 37            perciformes         labridae     halichoeres
-## 38            perciformes         labridae       labroides
-## 39            perciformes         labridae          labrus
-## 40            perciformes         labridae   opthalmolepis
-## 41            perciformes         labridae   semicossyphus
-## 42            perciformes         labridae   tautogolabrus
-## 43            perciformes         labridae      thalassoma
-## 44            perciformes         labridae      thalassoma
-## 45            perciformes      lethrinidae       lethrinus
-## 46            perciformes       lutjanidae        lutjanus
-## 47            perciformes       lutjanidae        lutjanus
-## 48            perciformes       lutjanidae        lutjanus
-## 49            perciformes       lutjanidae        lutjanus
-## 50            perciformes       lutjanidae         ocyurus
-## 51            perciformes    malacanthidae    caulolatilus
-## 52            perciformes        moronidae   dicentrarchus
-## 53            perciformes         mullidae  mulloidichthys
-## 54            perciformes         mullidae      parupeneus
-## 55            perciformes         percidae           perca
-## 56            perciformes    pomacanthidae       abudefduf
-## 57            perciformes    pomacentridae       dascyllus
-## 58            perciformes       serranidae   cephalopholis
-## 59            perciformes       serranidae   cephalopholis
-## 60            perciformes       serranidae   cephalopholis
-## 61            perciformes       serranidae   cephalopholis
-## 62            perciformes       serranidae     epinephelus
-## 63            perciformes       serranidae     epinephelus
-## 64            perciformes       serranidae     epinephelus
-## 65            perciformes       serranidae     epinephelus
-## 66            perciformes       serranidae     epinephelus
-## 67            perciformes       serranidae  hypoplectrodes
-## 68            perciformes       serranidae  hypoplectrodes
-## 69            perciformes       serranidae    mycteroperca
-## 70            perciformes       serranidae      paralabrax
-## 71            perciformes       serranidae      paralabrax
-## 72            perciformes       serranidae    plectropomus
-## 73            perciformes       serranidae    plectropomus
-## 74            perciformes       serranidae        serranus
-## 75            perciformes       serranidae        serranus
-## 76            perciformes         sparidae          sparus
-## 77          salmoniformes       salmonidae    oncorhynchus
-## 78          salmoniformes       salmonidae    oncorhynchus
-## 79          salmoniformes       salmonidae    oncorhynchus
-## 80          salmoniformes       salmonidae           salmo
-## 81          salmoniformes       salmonidae           salmo
-## 82        scorpaeniformes         cottidae          cottus
-## 83        scorpaeniformes         cottidae          cottus
-## 84        scorpaeniformes         cottidae          cottus
-## 85        scorpaeniformes       sebastidae        sebastes
-## 86        scorpaeniformes       sebastidae        sebastes
-## 87        scorpaeniformes       sebastidae        sebastes
-## 88        scorpaeniformes       sebastidae        sebastes
-## 89        scorpaeniformes       sebastidae        sebastes
-## 90           siluriformes      ictaluridae       ictalurus
-## 91        syngnathiformes     syngnathidae     hippocampus
-## 92        syngnathiformes     syngnathidae        nerophis
-## 93  tetraodontiformes\xa0   tetraodontidae    canthigaster
-## 94        accipitriformes     accipitridae          aquila
-## 95        accipitriformes     accipitridae           buteo
-## 96        accipitriformes     accipitridae       circaetus
-## 97        accipitriformes     accipitridae      hieraaetus
-## 98        accipitriformes     accipitridae      hieraaetus
-## 99        accipitriformes     accipitridae        neophron
-## 100        apterygiformes      apterygidae         apteryx
-## 101      caprimulgiformes    caprimulgidae     caprimulgus
-## 102       charadriiformes   haematopodidae      haematopus
-## 103         coraciiformes       coraciidae        coracias
-## 104         coraciiformes         upupidae           upupa
-## 105          cuculiformes        cuculidae        clamator
-## 106          cuculiformes        cuculidae         cuculus
-## 107          cuculiformes        cuculidae       geococcyx
-## 108          cuculiformes        cuculidae     neopmorphus
-## 109         falconiformes     accipitridae       accipiter
-## 110         falconiformes     accipitridae       accipiter
-## 111         falconiformes     accipitridae       accipiter
-## 112         falconiformes     accipitridae       accipiter
-## 113         falconiformes     accipitridae           buteo
-## 114         falconiformes     accipitridae           buteo
-## 115         falconiformes     accipitridae           buteo
-## 116         falconiformes     accipitridae          circus
-## 117         falconiformes     accipitridae          circus
-## 118         falconiformes     accipitridae          milvus
-## 119         falconiformes       falconidae        caracara
-## 120         falconiformes       falconidae        daptrius
-## 121         falconiformes       falconidae           falco
-## 122         falconiformes       falconidae           falco
-## 123         falconiformes       falconidae           falco
-## 124         falconiformes       falconidae           falco
-## 125         falconiformes       falconidae           falco
-## 126            gruiformes         rallidae        aramides
-## 127            gruiformes         rallidae          rallus
-## 128         passeriformes   acrocephalisae       hippolais
-## 129         passeriformes     aegithalidae      aegithalos
-## 130         passeriformes        alaudidae         lululla
-## 131         passeriformes     cardinalidae           habia
-## 132         passeriformes     cardinalidae           habia
-## 133         passeriformes        certhidae         certhia
-## 134         passeriformes     cisticolidae       cisticola
-## 135         passeriformes         corvidae          corvus
-## 136         passeriformes      emberizidae      ammodramus
-## 137         passeriformes      emberizidae       passerina
-## 138         passeriformes      emberizidae        spizella
-## 139         passeriformes      emberizidae        spizella
-## 140         passeriformes     fringillidae       fringilla
-## 141         passeriformes     fringillidae         serinus
-## 142         passeriformes        icteridae       sturnella
-## 143         passeriformes        icteridae       sturnella
-## 144         passeriformes         incertae         icteria
-## 145         passeriformes         laniidae         laniuis
-## 146         passeriformes         laniidae         laniuis
-## 147         passeriformes         laniidae          lanius
-## 148         passeriformes         laniidae          lanius
-## 149         passeriformes          mimidae           mimus
-## 150         passeriformes     motacillidae       motacilla
-## 151         passeriformes     motacillidae       motacilla
-## 152         passeriformes     muscicapidae       muscicapa
-## 153         passeriformes     muscicapidae        oenanthe
-## 154         passeriformes     muscicapidae     phoenicurus
-## 155         passeriformes     muscicapidae        saxicola
-## 156         passeriformes          paridae           parus
-## 157         passeriformes          paridae           parus
-## 158         passeriformes          paridae           parus
-## 159         passeriformes          paridae           parus
-## 160         passeriformes        parulidae  geothlypis\xa0
-## 161         passeriformes        parulidae      geothylpis
-## 162         passeriformes        parulidae    protonotaria
-## 163         passeriformes        parulidae         seiurus
-## 164         passeriformes        parulidae       setophaga
-## 165         passeriformes        parulidae       setophaga
-## 166         passeriformes        parulidae       setophaga
-## 167         passeriformes        parulidae       setophaga
-## 168         passeriformes        parulidae       setophaga
-## 169         passeriformes        parulidae       setophaga
-## 170         passeriformes        parulidae       setophaga
-## 171         passeriformes        parulidae        wilsonia
-## 172         passeriformes   phylloscopidae    phylloscopus
-## 173         passeriformes        regulidae         regulus
-## 174         passeriformes        regulidae         regulus
-## 175         passeriformes        stittidae           sitta
-## 176         passeriformes         sylvidae         chamaea
-## 177         passeriformes        sylviidae          sylvia
-## 178         passeriformes        sylviidae          sylvia
-## 179         passeriformes    troglodytidae      thryomanes
-## 180         passeriformes    troglodytidae     thryothorus
-## 181         passeriformes    troglodytidae     troglodytes
-## 182         passeriformes    troglodytidae     troglodytes
-## 183         passeriformes         turdidae          sialia
-## 184         passeriformes       tyrannidae        contopus
-## 185         passeriformes       tyrannidae       empidonax
-## 186         passeriformes       tyrannidae       empidonax
-## 187         passeriformes       tyrannidae        tyrannus
-## 188         passeriformes       vireonidae           vireo
-## 189         passeriformes       vireonidae           vireo
-## 190         passeriformes       vireonidae           vireo
-## 191         passeriformes       vireonidae           vireo
-## 192        pelecaniformes         ardeidae        botaurus
-## 193        pelecaniformes         ardeidae      ixobrychus
-## 194            piciformes          picidae       dryocopus
-## 195            piciformes          picidae            jynx
-## 196            piciformes          picidae        picoides
-## 197            piciformes          picidae        picoides
-## 198            piciformes          picidae        picoides
-## 199            piciformes          picidae           picus
-## 200            piciformes          picidae           picus
-## 201          strigiformes        strigidae        aegolius
-## 202          strigiformes        strigidae            asio
-## 203          strigiformes        strigidae          athene
-## 204          strigiformes        strigidae            bubo
-## 205          strigiformes        strigidae            bubo
-## 206          strigiformes        strigidae      glaucidium
-## 207          strigiformes        strigidae          nyctea
-## 208          strigiformes        strigidae           strix
-## 209          strigiformes        tytonidae            tyto
-## 210          afrosoricida  chrysochloridae    chrysospalax
-## 211          afrosoricida  chrysochloridae      eremitalpa
-## 212             carnivora          canidae          alopex
-## 213             carnivora          canidae           canis
-## 214             carnivora          canidae     pseudalopex
-## 215             carnivora          canidae     pseudalopex
-## 216             carnivora          canidae          vulpes
-## 217             carnivora          canidae          vulpes
-## 218             carnivora          canidae          vulpes
-## 219             carnivora       eupleridae    cryptoprocta
-## 220             carnivora          felidae        acinonyx
-## 221             carnivora          felidae         caracal
-## 222             carnivora          felidae           felis
-## 223             carnivora          felidae           felis
-## 224             carnivora          felidae     herpailurus
-## 225             carnivora          felidae       leopardus
-## 226             carnivora          felidae       leopardus
-## 227             carnivora          felidae     leptailurus
-## 228             carnivora          felidae            lynx
-## 229             carnivora          felidae            lynx
-## 230             carnivora          felidae            lynx
-## 231             carnivora          felidae            lynx
-## 232             carnivora          felidae       oncifelis
-## 233             carnivora          felidae        panthera
-## 234             carnivora          felidae        panthera
-## 235             carnivora          felidae        panthera
-## 236             carnivora          felidae    prionailurus
-## 237             carnivora          felidae            puma
-## 238             carnivora          felidae           uncia
-## 239             carnivora      herpestidae          atilax
-## 240             carnivora      herpestidae        cynictis
-## 241             carnivora      herpestidae        helogale
-## 242             carnivora      herpestidae       herpestes
-## 243             carnivora      herpestidae       ichneumia
-## 244             carnivora         hyanidae        proteles
-## 245             carnivora       mustelidae            eira
-## 246             carnivora       mustelidae        galictis
-## 247             carnivora       mustelidae            gulo
-## 248             carnivora       mustelidae          martes
-## 249             carnivora       mustelidae          martes
-## 250             carnivora       mustelidae          martes
-## 251             carnivora       mustelidae          martes
-## 252             carnivora       mustelidae         mustela
-## 253             carnivora       mustelidae         mustela
-## 254             carnivora       mustelidae         mustela
-## 255             carnivora       mustelidae         mustela
-## 256             carnivora       mustelidae         mustela
-## 257             carnivora       mustelidae         mustela
-## 258             carnivora       mustelidae         mustela
-## 259             carnivora       mustelidae         taxidea
-## 260             carnivora          ursidae        melursus
-## 261             carnivora       viverridae         genetta
-## 262             carnivora       viverridae         genetta
-## 263             carnivora       viverridae         viverra
-## 264         dasyuromorpha       dasyuridae        dasyurus
-## 265         dasyuromorpha       dasyuridae        dasyurus
-## 266         dasyuromorpha       dasyuridae     sminthopsis
-## 267         dasyuromorpia       dasyuridae      antechinus
-## 268       didelphimorphia      didelphidae     monodelphis
-## 269       didelphimorphia      didelphidae        thylamys
-## 270        erinaceomorpha      erinaceidae       erinaceus
-## 271        erinaceomorpha      erinaceidae     hemiechinus
-## 272         macroscelidea  macroscelididae    elephantulus
-## 273         macroscelidea  macroscelididae     petrodromus
-## 274         macroscelidea  macroscelididae     rhynchocyon
-## 275          monotrematae   tachyglossidae    tachyoryctes
-## 276       peramelemorphia      peramelidae         isoodon
-## 277       peramelemorphia      peramelidae         isoodon
-## 278                 roden       cricetidae       onychomys
-## 279              rodentia       cricetidae      peromyscus
-## 280          soricomorpha        soricidae       crocidura
-## 281          soricomorpha        soricidae           sorex
-## 282          soricomorpha        soricidae           sorex
-## 283          soricomorpha        soricidae           sorex
-## 284          soricomorpha        soricidae           sorex
-## 285          soricomorpha        soricidae           sorex
-## 286          soricomorpha         talpidae       condylura
-## 287          soricomorpha         talpidae        scalopus
-## 288          soricomorpha         talpidae           talpa
-## 289          soricomorpha         talpidae           talpa
-## 290              squamata       colubridae       carphopis
-## 291              squamata       colubridae       carphopis
-## 292              squamata       colubridae         coluber
-## 293              squamata       colubridae         coluber
-## 294              squamata       colubridae       diadophis
-## 295              squamata       colubridae      drymarchon
-## 296              squamata       colubridae          elaphe
-## 297              squamata       colubridae          elaphe
-## 298              squamata       colubridae       heterodon
-## 299              squamata       colubridae       hierophis
-## 300              squamata       colubridae    lampropeltis
-## 301              squamata       colubridae    lampropeltis
-## 302              squamata       colubridae     masticophis
-## 303              squamata       colubridae          natrix
-## 304              squamata       colubridae         nerodia
-## 305              squamata       colubridae         nerodia
-## 306              squamata       colubridae      oocatochus
-## 307              squamata       colubridae       pituophis
-## 308              squamata       colubridae       pituophis
-## 309              squamata       colubridae      thamnophis
-## 310              squamata       colubridae      thamnophis
-## 311              squamata       colubridae         zamenis
-## 312              squamata         elapidae   hoplocephalus
-## 313              squamata         elapidae        notechis
-## 314              squamata         elapidae      pseudechis
-## 315              squamata       pythonidae         morelia
-## 316              squamata        viperidae     agkistrodon
-## 317              squamata        viperidae     agkistrodon
-## 318              squamata        viperidae           bitis
-## 319              squamata        viperidae        bothrops
-## 320              squamata        viperidae        crotalus
-## 321              squamata        viperidae        crotalus
-## 322              squamata        viperidae        crotalus
-## 323              squamata        viperidae        crotalus
-## 324              squamata        viperidae        crotalus
-## 325              squamata        viperidae        crotalus
-## 326              squamata        viperidae        crotalus
-## 327              squamata        viperidae        crotalus
-## 328              squamata        viperidae        gloydius
-## 329              squamata        viperidae     montivipera
-## 330              squamata        viperidae          vipera
-## 331            testudines         chelidae       chelodina
-## 332            testudines         chelidae     mesoclemmys
-## 333            testudines      chelydridae        chelydra
-## 334            testudines         emydidae       chrysemys
-## 335            testudines         emydidae     deirochelys
-## 336            testudines         emydidae       emydoidea
-## 337            testudines         emydidae            emys
-## 338            testudines         emydidae       graptemys
-## 339            testudines    kinosternidae     kinosternon
-## 340            testudines    kinosternidae    sternotherus
-## 341            testudines    kinosternidae    sternotherus
-## 342            testudines     trionychidae         apalone
+##                         order           family              genus
+## 1              anguilliformes      anguillidae           anguilla
+## 2               cypriniformes     catostomidae          moxostoma
+## 3               cypriniformes       cyprinidae         campostoma
+## 4               cypriniformes       cyprinidae        clinostomus
+## 5               cypriniformes       cyprinidae        rhinichthys
+## 6                 esociformes         esocidae               esox
+## 7                  gadiformes          gadidae         pollachius
+## 8                  gadiformes          gadidae         pollachius
+## 9                 perciformes       carangidae             caranx
+## 10                perciformes    centrarchidae        ambloplites
+## 11                perciformes    centrarchidae            lepomis
+## 12                perciformes    centrarchidae            lepomis
+## 13                perciformes    centrarchidae            lepomis
+## 14                perciformes    centrarchidae        micropterus
+## 15                perciformes    centrarchidae        micropterus
+## 16                perciformes    centrarchidae            pomoxis
+## 17                perciformes   chaetodontidae          chaetodon
+## 18                perciformes   chaetodontidae          chaetodon
+## 19                perciformes   chaetodontidae          chaetodon
+## 20                perciformes   chaetodontidae          chaetodon
+## 21                perciformes   chaetodontidae          chaetodon
+## 22                perciformes cheilodactylidae     cheilodactylus
+## 23                perciformes      cirrhitidae     amblycirrhitus
+## 24                perciformes      cirrhitidae     cirrhitichthys
+## 25                perciformes         cottidae    scorpaenichthys
+## 26                perciformes         gobiidae      amblyeleotris
+## 27                perciformes         gobiidae         lythrypnus
+## 28                perciformes         gobiidae          priolepis
+## 29                perciformes         gobiidae       rhinogobiops
+## 30                perciformes         gobiidae       valenciennea
+## 31                perciformes         labridae           bodianus
+## 32                perciformes         labridae           chelinus
+## 33                perciformes         labridae              coris
+## 34                perciformes         labridae        halichoeres
+## 35                perciformes         labridae        halichoeres
+## 36                perciformes         labridae        halichoeres
+## 37                perciformes         labridae        halichoeres
+## 38                perciformes         labridae          labroides
+## 39                perciformes         labridae             labrus
+## 40                perciformes         labridae      opthalmolepis
+## 41                perciformes         labridae      semicossyphus
+## 42                perciformes         labridae      tautogolabrus
+## 43                perciformes         labridae         thalassoma
+## 44                perciformes         labridae         thalassoma
+## 45                perciformes      lethrinidae          lethrinus
+## 46                perciformes       lutjanidae           lutjanus
+## 47                perciformes       lutjanidae           lutjanus
+## 48                perciformes       lutjanidae           lutjanus
+## 49                perciformes       lutjanidae           lutjanus
+## 50                perciformes       lutjanidae            ocyurus
+## 51                perciformes    malacanthidae       caulolatilus
+## 52                perciformes        moronidae      dicentrarchus
+## 53                perciformes         mullidae     mulloidichthys
+## 54                perciformes         mullidae         parupeneus
+## 55                perciformes         percidae              perca
+## 56                perciformes    pomacanthidae          abudefduf
+## 57                perciformes    pomacentridae          dascyllus
+## 58                perciformes       serranidae      cephalopholis
+## 59                perciformes       serranidae      cephalopholis
+## 60                perciformes       serranidae      cephalopholis
+## 61                perciformes       serranidae      cephalopholis
+## 62                perciformes       serranidae        epinephelus
+## 63                perciformes       serranidae        epinephelus
+## 64                perciformes       serranidae        epinephelus
+## 65                perciformes       serranidae        epinephelus
+## 66                perciformes       serranidae        epinephelus
+## 67                perciformes       serranidae     hypoplectrodes
+## 68                perciformes       serranidae     hypoplectrodes
+## 69                perciformes       serranidae       mycteroperca
+## 70                perciformes       serranidae         paralabrax
+## 71                perciformes       serranidae         paralabrax
+## 72                perciformes       serranidae       plectropomus
+## 73                perciformes       serranidae       plectropomus
+## 74                perciformes       serranidae           serranus
+## 75                perciformes       serranidae           serranus
+## 76                perciformes         sparidae             sparus
+## 77              salmoniformes       salmonidae       oncorhynchus
+## 78              salmoniformes       salmonidae       oncorhynchus
+## 79              salmoniformes       salmonidae       oncorhynchus
+## 80              salmoniformes       salmonidae              salmo
+## 81              salmoniformes       salmonidae              salmo
+## 82            scorpaeniformes         cottidae             cottus
+## 83            scorpaeniformes         cottidae             cottus
+## 84            scorpaeniformes         cottidae             cottus
+## 85            scorpaeniformes       sebastidae           sebastes
+## 86            scorpaeniformes       sebastidae           sebastes
+## 87            scorpaeniformes       sebastidae           sebastes
+## 88            scorpaeniformes       sebastidae           sebastes
+## 89            scorpaeniformes       sebastidae           sebastes
+## 90               siluriformes      ictaluridae          ictalurus
+## 91            syngnathiformes     syngnathidae        hippocampus
+## 92            syngnathiformes     syngnathidae           nerophis
+## 93  tetraodontiformes<U+00A0>   tetraodontidae       canthigaster
+## 94            accipitriformes     accipitridae             aquila
+## 95            accipitriformes     accipitridae              buteo
+## 96            accipitriformes     accipitridae          circaetus
+## 97            accipitriformes     accipitridae         hieraaetus
+## 98            accipitriformes     accipitridae         hieraaetus
+## 99            accipitriformes     accipitridae           neophron
+## 100            apterygiformes      apterygidae            apteryx
+## 101          caprimulgiformes    caprimulgidae        caprimulgus
+## 102           charadriiformes   haematopodidae         haematopus
+## 103             coraciiformes       coraciidae           coracias
+## 104             coraciiformes         upupidae              upupa
+## 105              cuculiformes        cuculidae           clamator
+## 106              cuculiformes        cuculidae            cuculus
+## 107              cuculiformes        cuculidae          geococcyx
+## 108              cuculiformes        cuculidae        neopmorphus
+## 109             falconiformes     accipitridae          accipiter
+## 110             falconiformes     accipitridae          accipiter
+## 111             falconiformes     accipitridae          accipiter
+## 112             falconiformes     accipitridae          accipiter
+## 113             falconiformes     accipitridae              buteo
+## 114             falconiformes     accipitridae              buteo
+## 115             falconiformes     accipitridae              buteo
+## 116             falconiformes     accipitridae             circus
+## 117             falconiformes     accipitridae             circus
+## 118             falconiformes     accipitridae             milvus
+## 119             falconiformes       falconidae           caracara
+## 120             falconiformes       falconidae           daptrius
+## 121             falconiformes       falconidae              falco
+## 122             falconiformes       falconidae              falco
+## 123             falconiformes       falconidae              falco
+## 124             falconiformes       falconidae              falco
+## 125             falconiformes       falconidae              falco
+## 126                gruiformes         rallidae           aramides
+## 127                gruiformes         rallidae             rallus
+## 128             passeriformes   acrocephalisae          hippolais
+## 129             passeriformes     aegithalidae         aegithalos
+## 130             passeriformes        alaudidae            lululla
+## 131             passeriformes     cardinalidae              habia
+## 132             passeriformes     cardinalidae              habia
+## 133             passeriformes        certhidae            certhia
+## 134             passeriformes     cisticolidae          cisticola
+## 135             passeriformes         corvidae             corvus
+## 136             passeriformes      emberizidae         ammodramus
+## 137             passeriformes      emberizidae          passerina
+## 138             passeriformes      emberizidae           spizella
+## 139             passeriformes      emberizidae           spizella
+## 140             passeriformes     fringillidae          fringilla
+## 141             passeriformes     fringillidae            serinus
+## 142             passeriformes        icteridae          sturnella
+## 143             passeriformes        icteridae          sturnella
+## 144             passeriformes         incertae            icteria
+## 145             passeriformes         laniidae            laniuis
+## 146             passeriformes         laniidae            laniuis
+## 147             passeriformes         laniidae             lanius
+## 148             passeriformes         laniidae             lanius
+## 149             passeriformes          mimidae              mimus
+## 150             passeriformes     motacillidae          motacilla
+## 151             passeriformes     motacillidae          motacilla
+## 152             passeriformes     muscicapidae          muscicapa
+## 153             passeriformes     muscicapidae           oenanthe
+## 154             passeriformes     muscicapidae        phoenicurus
+## 155             passeriformes     muscicapidae           saxicola
+## 156             passeriformes          paridae              parus
+## 157             passeriformes          paridae              parus
+## 158             passeriformes          paridae              parus
+## 159             passeriformes          paridae              parus
+## 160             passeriformes        parulidae geothlypis<U+00A0>
+## 161             passeriformes        parulidae         geothylpis
+## 162             passeriformes        parulidae       protonotaria
+## 163             passeriformes        parulidae            seiurus
+## 164             passeriformes        parulidae          setophaga
+## 165             passeriformes        parulidae          setophaga
+## 166             passeriformes        parulidae          setophaga
+## 167             passeriformes        parulidae          setophaga
+## 168             passeriformes        parulidae          setophaga
+## 169             passeriformes        parulidae          setophaga
+## 170             passeriformes        parulidae          setophaga
+## 171             passeriformes        parulidae           wilsonia
+## 172             passeriformes   phylloscopidae       phylloscopus
+## 173             passeriformes        regulidae            regulus
+## 174             passeriformes        regulidae            regulus
+## 175             passeriformes        stittidae              sitta
+## 176             passeriformes         sylvidae            chamaea
+## 177             passeriformes        sylviidae             sylvia
+## 178             passeriformes        sylviidae             sylvia
+## 179             passeriformes    troglodytidae         thryomanes
+## 180             passeriformes    troglodytidae        thryothorus
+## 181             passeriformes    troglodytidae        troglodytes
+## 182             passeriformes    troglodytidae        troglodytes
+## 183             passeriformes         turdidae             sialia
+## 184             passeriformes       tyrannidae           contopus
+## 185             passeriformes       tyrannidae          empidonax
+## 186             passeriformes       tyrannidae          empidonax
+## 187             passeriformes       tyrannidae           tyrannus
+## 188             passeriformes       vireonidae              vireo
+## 189             passeriformes       vireonidae              vireo
+## 190             passeriformes       vireonidae              vireo
+## 191             passeriformes       vireonidae              vireo
+## 192            pelecaniformes         ardeidae           botaurus
+## 193            pelecaniformes         ardeidae         ixobrychus
+## 194                piciformes          picidae          dryocopus
+## 195                piciformes          picidae               jynx
+## 196                piciformes          picidae           picoides
+## 197                piciformes          picidae           picoides
+## 198                piciformes          picidae           picoides
+## 199                piciformes          picidae              picus
+## 200                piciformes          picidae              picus
+## 201              strigiformes        strigidae           aegolius
+## 202              strigiformes        strigidae               asio
+## 203              strigiformes        strigidae             athene
+## 204              strigiformes        strigidae               bubo
+## 205              strigiformes        strigidae               bubo
+## 206              strigiformes        strigidae         glaucidium
+## 207              strigiformes        strigidae             nyctea
+## 208              strigiformes        strigidae              strix
+## 209              strigiformes        tytonidae               tyto
+## 210              afrosoricida  chrysochloridae       chrysospalax
+## 211              afrosoricida  chrysochloridae         eremitalpa
+## 212                 carnivora          canidae             alopex
+## 213                 carnivora          canidae              canis
+## 214                 carnivora          canidae        pseudalopex
+## 215                 carnivora          canidae        pseudalopex
+## 216                 carnivora          canidae             vulpes
+## 217                 carnivora          canidae             vulpes
+## 218                 carnivora          canidae             vulpes
+## 219                 carnivora       eupleridae       cryptoprocta
+## 220                 carnivora          felidae           acinonyx
+## 221                 carnivora          felidae            caracal
+## 222                 carnivora          felidae              felis
+## 223                 carnivora          felidae              felis
+## 224                 carnivora          felidae        herpailurus
+## 225                 carnivora          felidae          leopardus
+## 226                 carnivora          felidae          leopardus
+## 227                 carnivora          felidae        leptailurus
+## 228                 carnivora          felidae               lynx
+## 229                 carnivora          felidae               lynx
+## 230                 carnivora          felidae               lynx
+## 231                 carnivora          felidae               lynx
+## 232                 carnivora          felidae          oncifelis
+## 233                 carnivora          felidae           panthera
+## 234                 carnivora          felidae           panthera
+## 235                 carnivora          felidae           panthera
+## 236                 carnivora          felidae       prionailurus
+## 237                 carnivora          felidae               puma
+## 238                 carnivora          felidae              uncia
+## 239                 carnivora      herpestidae             atilax
+## 240                 carnivora      herpestidae           cynictis
+## 241                 carnivora      herpestidae           helogale
+## 242                 carnivora      herpestidae          herpestes
+## 243                 carnivora      herpestidae          ichneumia
+## 244                 carnivora         hyanidae           proteles
+## 245                 carnivora       mustelidae               eira
+## 246                 carnivora       mustelidae           galictis
+## 247                 carnivora       mustelidae               gulo
+## 248                 carnivora       mustelidae             martes
+## 249                 carnivora       mustelidae             martes
+## 250                 carnivora       mustelidae             martes
+## 251                 carnivora       mustelidae             martes
+## 252                 carnivora       mustelidae            mustela
+## 253                 carnivora       mustelidae            mustela
+## 254                 carnivora       mustelidae            mustela
+## 255                 carnivora       mustelidae            mustela
+## 256                 carnivora       mustelidae            mustela
+## 257                 carnivora       mustelidae            mustela
+## 258                 carnivora       mustelidae            mustela
+## 259                 carnivora       mustelidae            taxidea
+## 260                 carnivora          ursidae           melursus
+## 261                 carnivora       viverridae            genetta
+## 262                 carnivora       viverridae            genetta
+## 263                 carnivora       viverridae            viverra
+## 264             dasyuromorpha       dasyuridae           dasyurus
+## 265             dasyuromorpha       dasyuridae           dasyurus
+## 266             dasyuromorpha       dasyuridae        sminthopsis
+## 267             dasyuromorpia       dasyuridae         antechinus
+## 268           didelphimorphia      didelphidae        monodelphis
+## 269           didelphimorphia      didelphidae           thylamys
+## 270            erinaceomorpha      erinaceidae          erinaceus
+## 271            erinaceomorpha      erinaceidae        hemiechinus
+## 272             macroscelidea  macroscelididae       elephantulus
+## 273             macroscelidea  macroscelididae        petrodromus
+## 274             macroscelidea  macroscelididae        rhynchocyon
+## 275              monotrematae   tachyglossidae       tachyoryctes
+## 276           peramelemorphia      peramelidae            isoodon
+## 277           peramelemorphia      peramelidae            isoodon
+## 278                     roden       cricetidae          onychomys
+## 279                  rodentia       cricetidae         peromyscus
+## 280              soricomorpha        soricidae          crocidura
+## 281              soricomorpha        soricidae              sorex
+## 282              soricomorpha        soricidae              sorex
+## 283              soricomorpha        soricidae              sorex
+## 284              soricomorpha        soricidae              sorex
+## 285              soricomorpha        soricidae              sorex
+## 286              soricomorpha         talpidae          condylura
+## 287              soricomorpha         talpidae           scalopus
+## 288              soricomorpha         talpidae              talpa
+## 289              soricomorpha         talpidae              talpa
+## 290                  squamata       colubridae          carphopis
+## 291                  squamata       colubridae          carphopis
+## 292                  squamata       colubridae            coluber
+## 293                  squamata       colubridae            coluber
+## 294                  squamata       colubridae          diadophis
+## 295                  squamata       colubridae         drymarchon
+## 296                  squamata       colubridae             elaphe
+## 297                  squamata       colubridae             elaphe
+## 298                  squamata       colubridae          heterodon
+## 299                  squamata       colubridae          hierophis
+## 300                  squamata       colubridae       lampropeltis
+## 301                  squamata       colubridae       lampropeltis
+## 302                  squamata       colubridae        masticophis
+## 303                  squamata       colubridae             natrix
+## 304                  squamata       colubridae            nerodia
+## 305                  squamata       colubridae            nerodia
+## 306                  squamata       colubridae         oocatochus
+## 307                  squamata       colubridae          pituophis
+## 308                  squamata       colubridae          pituophis
+## 309                  squamata       colubridae         thamnophis
+## 310                  squamata       colubridae         thamnophis
+## 311                  squamata       colubridae            zamenis
+## 312                  squamata         elapidae      hoplocephalus
+## 313                  squamata         elapidae           notechis
+## 314                  squamata         elapidae         pseudechis
+## 315                  squamata       pythonidae            morelia
+## 316                  squamata        viperidae        agkistrodon
+## 317                  squamata        viperidae        agkistrodon
+## 318                  squamata        viperidae              bitis
+## 319                  squamata        viperidae           bothrops
+## 320                  squamata        viperidae           crotalus
+## 321                  squamata        viperidae           crotalus
+## 322                  squamata        viperidae           crotalus
+## 323                  squamata        viperidae           crotalus
+## 324                  squamata        viperidae           crotalus
+## 325                  squamata        viperidae           crotalus
+## 326                  squamata        viperidae           crotalus
+## 327                  squamata        viperidae           crotalus
+## 328                  squamata        viperidae           gloydius
+## 329                  squamata        viperidae        montivipera
+## 330                  squamata        viperidae             vipera
+## 331                testudines         chelidae          chelodina
+## 332                testudines         chelidae        mesoclemmys
+## 333                testudines      chelydridae           chelydra
+## 334                testudines         emydidae          chrysemys
+## 335                testudines         emydidae        deirochelys
+## 336                testudines         emydidae          emydoidea
+## 337                testudines         emydidae               emys
+## 338                testudines         emydidae          graptemys
+## 339                testudines    kinosternidae        kinosternon
+## 340                testudines    kinosternidae       sternotherus
+## 341                testudines    kinosternidae       sternotherus
+## 342                testudines     trionychidae            apalone
 ##                      species      primarymethod    N mean.mass.g  log10.mass
 ## 1                   rostrata          telemetry   16      887.00  2.94792362
 ## 2                  poecilura     mark-recapture <NA>      562.00  2.74973632
@@ -3838,7 +3831,7 @@ meat
 ## 60                                                                Shpigel M, Fishelson L. 1991. Territoriality and associated behaviour in three species of the genus Cephalopholis (Pisces: Serranidae) in the Gulf of Aqaba, Red Sea. Journal of Fisheries Biology 38, 887-896.
 ## 61                                                                Shpigel M, Fishelson L. 1991. Territoriality and associated behaviour in three species of the genus Cephalopholis (Pisces: Serranidae) in the Gulf of Aqaba, Red Sea. Journal of Fisheries Biology 38, 887-896.
 ## 62                                                                               Shapiro DY, Garcia-Moliner G, Sadovy Y. 1994. Social system of an inshore stock of the red hind grouper, Ephephelus guttatus (Pisces : Serranidae). Environmental Biology of Fishes 41, 415-422.
-## 63                                   Lembo G, Spedicato MT, \xd8kland F, et al. 2002. A wireless communication system for determining site fidelity of juvenile dusky groupers Epinephelus marginatus (Lowe, 1834) using coded acoustic transmitters. Hydrobiologia 483, 249-257.
+## 63                                   Lembo G, Spedicato MT, <d8>kland F, et al. 2002. A wireless communication system for determining site fidelity of juvenile dusky groupers Epinephelus marginatus (Lowe, 1834) using coded acoustic transmitters. Hydrobiologia 483, 249-257.
 ## 64                                                                                                                                 Farmer NA, Ault JS. 2011. Grouper and snapper movements and habitat use in Dry Tortugas, Florida. Marine Ecology Progress Series 433, 169-184.
 ## 65                                                                    Bolden SK. 2001. Using Ultrasonic Telemetry to Determine Home Range of a Coral-Reef Fish. In: Sibert JR, Nielsen JL, eds. Electronic Tagging and Tracking in Marine Fisheries New York, NY: Springer. 484p.
 ## 66                                                                   Kaunda-Arara B, Rose GA. 2004. Homing and site fidelity in the greasy grouper Epinephelus tauvina (Serranidae) within a marine protected area in coastal Kenya. Marine Ecology Progress Series 277, 245-251.
@@ -3847,10 +3840,10 @@ meat
 ## 69                                                                                                                                 Farmer NA, Ault JS. 2011. Grouper and snapper movements and habitat use in Dry Tortugas, Florida. Marine Ecology Progress Series 433, 169-184.
 ## 70                                             Lowe CG, Topping DT, Cartamil DP, et al. 2003. Movement patterns, home range, and habitat utilization of adult kelp bass Paralabrax clathratus in a temperate no-take marine reserve. Marine Ecology Progress Series 256, 205-216.
 ## 71                                                                                                    Mason TJ, Lowe CG. 2010. Home range, habitat use, and site fidelity of barred sand bass within a southern California marine protected area. Fisheries Research 106, 93-101.
-## 72                                                                                                                            Hutchinson N, Rhodes KL. 2010. Home range estimates for squaretail coralgrouper, Plectropomus areolatus (R\xfcppell 1830). Coral Reefs 29: 511-519.
+## 72                                                                                                                            Hutchinson N, Rhodes KL. 2010. Home range estimates for squaretail coralgrouper, Plectropomus areolatus (R<fc>ppell 1830). Coral Reefs 29: 511-519.
 ## 73                                                                                                                          Zeller DC. 1997. Home range and activity patterns of the coral trout Plectropomus leopardus (Serranidae). Marine Ecology Progress Series. 154, 65-77.
-## 74                                                 Al\xf3s J, March D, Palmer M, Grau A, Morales-Nin. 2011. Spatial and temporal patterns in Serranus cabrilla habitat use in the NW Mediterranean revealed by acoustic telemetry. Marine Ecology Progress Series 427, 173 - 186.
-## 75                                                           March D, Palmer M, Al\xf3s J, et al. 2010. Short-term residence, home range size and diel patterns of the painted comber Serranus scriba in a temperate marine reserve. Marine Ecology Progress Series 400, 195-206.
+## 74                                                 Al<f3>s J, March D, Palmer M, Grau A, Morales-Nin. 2011. Spatial and temporal patterns in Serranus cabrilla habitat use in the NW Mediterranean revealed by acoustic telemetry. Marine Ecology Progress Series 427, 173 - 186.
+## 75                                                           March D, Palmer M, Al<f3>s J, et al. 2010. Short-term residence, home range size and diel patterns of the painted comber Serranus scriba in a temperate marine reserve. Marine Ecology Progress Series 400, 195-206.
 ## 76                                                                             Parsons DM, Babcock RC, Hankin RKS, et al. 2003. Snapper Pagrus auratus (Sparidae) home range dynamics: acoustic tagging studies in a marine reserve. Marine Ecology Progress Series 262, 253-265.
 ## 77                                                                                                                                     Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aquatic Sciences 52:1499-1508.
 ## 78                                                                                                                                     Minns, C. K. 1995. Allometry of home range size in lake and river fishes. Canadian Journal of Fisheries and Aquatic Sciences 52:1499-1508.
@@ -3875,7 +3868,7 @@ meat
 ## 97                                                                                         Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
 ## 98                                                                     Martinez JE, Pagan I, Palazon JA, Calvo JF. 2007. Habitat use of booted eagles (Hieraaetus pennatus) in a Special Protection Area: implications for conservation. Biodiversity Conservation 16, 3481-3488.
 ## 99                                                                                         Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 100                                                                   Miles JRG Miles, Potter MA, Fordham RA. 1997. Northern brown kiwi (Apteryx australis mantelli) in Tongariro National Park and Tongariro Forest \x97 ecology and threats. Science for Conservation 51, 1-23.
+## 100                                                               Miles JRG Miles, Potter MA, Fordham RA. 1997. Northern brown kiwi (Apteryx australis mantelli) in Tongariro National Park and Tongariro Forest <U+0097> ecology and threats. Science for Conservation 51, 1-23.
 ## 101                                                                                        Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
 ## 102                                                          Schwemmer P, Garthe S. 2011. Spatial and temporal patterns of habitat use by Eurasian oystercatchers (Haematopus ostralegus) in the eastern Wadden Sea revealed using GPS data loggers. Marine Biology 158, 541-550.
 ## 103                                                                                        Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
@@ -4103,21 +4096,21 @@ meat
 ## 325                                                                                  Prival DB, Goode MJ, Swann DE, Schwalbe CR, Schroff MJ. 2002. Natural History of a Northern Population of Twin-Spotted Rattlesnakes, Crotalus pricei. Journal of Herpetology 36(4), 598-607.
 ## 326                                                                                                                                                                            Cardwell MD. 2008. The reproductive ecology of Mohave rattlesnakes. Journal of Zoology 274, 65-76.
 ## 327                                                                                                                                    Beck DD. 1995. Ecology and Energetics of Three Sympatric Rattlesnake Species in the Sonoran Desert. Journal of Herpetology 29(2), 211-223.
-## 328                                                                                                                  Shine R, Sun L-X. 2003. Attack strategy of an ambush predator: which attributes of the prey trigger a pit-viper\x92s strike? Functional Ecology 17, 340-348.
+## 328                                                                                                              Shine R, Sun L-X. 2003. Attack strategy of an ambush predator: which attributes of the prey trigger a pit-viper<U+0092>s strike? Functional Ecology 17, 340-348.
 ## 329                                                                                                                Ettling JA, Aghasyan LA, Aghasyan AL, Parker PG. 2013. Spatial Ecology of Armenian Vipers, Montivipera raddei, in a Human-Modified Landscape. Copeia 1, 64-71.
 ## 330                                                                                                             Brito JC. 2003. Seasonal Variation in Movements, Home Range, and Habitat Use by Male Vipera latastei in Northern Portugal. Journal of Herpetology 37(1), 155-160.
 ## 331                                                                Roe JH, Georges A. 2008. Terrestrial activity, movements and spatial ecology of an Australian freshwater turtle, Chelodina longicollis, in a temporally dynamic wetland system. Austral Ecology 33, 1045-1056.
-## 332                       Forero-Medina G, Cardenas-Arevalo G, Castano-Mora OV. 2011. Abundance, Home Range, and Movement Patterns of the Endemic Species Dahl\x92s Toad-Headed Turtle (Mesoclemmys dahli) in Cesar, Colombia. Chelonian Conservation and Biology 10(2), 228-236.
+## 332                   Forero-Medina G, Cardenas-Arevalo G, Castano-Mora OV. 2011. Abundance, Home Range, and Movement Patterns of the Endemic Species Dahl<U+0092>s Toad-Headed Turtle (Mesoclemmys dahli) in Cesar, Colombia. Chelonian Conservation and Biology 10(2), 228-236.
 ## 333                                                                          Brown GP, Bishop CA, Brooka RJ. 1994. Growth Rate, Reproductive Output, and Temperature Selection of Snapping Turtles inHabitats of Different Productivities. Journal of Herpetology 28(4), 405-410.
 ## 334                                             Rowe JW, Dalgarn SF. 2010. Home Range Size and Daily Movements of Midland Painted turtles (Cyrusemys picta marginata) in Relation to Bosy Size, Sex, and Weather Patterns. Herpetological Conservation and Biology 5(3), 461-473.
 ## 335                                                                                                             Buhlmann KA. 1995. Habitat Use, Terrestrial Movements, and Conservation of the Turtle, Deirochelys reticulariain Virginia. Journal of Herpetology 29(2), 173-181.
 ## 336                                                                                                         Innes RJ, Babbitt KJ, Kanter JJ. 2008. Home Range and Movement of Blanding's Turtles (Emydoidea blandingii) in New Hampshire. Northeastern Naturalist 15(3), 431-444.
-## 337                                                P\xe9rez-Santigosa N, Hidalgo-Vila J, D\xedaz-Paniagua C. 2013. Comparing Activity Patterns and Aquatic Home Range Areas Among Exotic and Native Turtles in Southern Spain. Chelonian Conservation and Biology 12(2), 313-319.
+## 337                                                P<e9>rez-Santigosa N, Hidalgo-Vila J, D<ed>az-Paniagua C. 2013. Comparing Activity Patterns and Aquatic Home Range Areas Among Exotic and Native Turtles in Southern Spain. Chelonian Conservation and Biology 12(2), 313-319.
 ## 338                                                                                                                                               Jones RL. 1996. Home Range and Seasonal Movements of the Turtle Graptemys flavimaculata. Journal of Herpetology 30(3), 376-385.
 ## 339                                                        Cordero GA, Reeves R, Swarth CW. 2012. Home-Range Size of an Eastern Mud Turtle, Kinosternon subrubrum, Population in the Mid-Atlantic Region of the United States. Chelonian Conservation and Biology 11(1), 121-124.
 ## 340                                                                     Ennen JR, Scott AF. 2013. Home-Range Size of an Eastern Mud Turtle, Kinosternon subrubrum, Population in the Mid-Atlantic Region of the United States. Chelonian Conservation and Biology 12(1), 199-203.
 ## 341                                                          Rowe JW, Lehr GC, McCarthy PM, Converse PM. 2009. Activity, Movements and Activity Area Size in Stinkpot Turtles (Sternotherus odoratus) in Southwestern Michigan Lake. American Midland Naturalist 162(2), 266-275.
-## 342                   Galois P, Leveille M, Bouthillier L, Daigle C, Parren S. 2002. Movement Patterns, Activity, and Home Range of the Eastern Spiny Softshell Turtle (Apalone spinifers) in Northern Lake Champlain, Qu\xe9bec, Vermont. Journal of Herpetology 36(3), 402-411.
+## 342                   Galois P, Leveille M, Bouthillier L, Daigle C, Parren S. 2002. Movement Patterns, Activity, and Home Range of the Eastern Spiny Softshell Turtle (Apalone spinifers) in Northern Lake Champlain, Qu<e9>bec, Vermont. Journal of Herpetology 36(3), 402-411.
 ##           realm thermoregulation locomotion trophic.guild dimension  preymass
 ## 1       aquatic        ectotherm   swimming     carnivore        3D        NA
 ## 2       aquatic        ectotherm   swimming     carnivore        2D        NA
@@ -4862,7 +4855,7 @@ meat
 ## 55                                                                                                                                                                                                                                                                                            <NA>
 ## 56                                                                                                                                                                                                                                                                                            <NA>
 ## 57                                                                                                                                                                                                                                                                                            <NA>
-## 58                                                                                                         Dierking J, Williams ID, Walsh W. 2009. Diet composition and prey selection of the introduced grouper species peacock hind (Cephalopholis argus) in Hawaii. Fish. Bull. 107:464\x96476.
+## 58                                                                                                     Dierking J, Williams ID, Walsh W. 2009. Diet composition and prey selection of the introduced grouper species peacock hind (Cephalopholis argus) in Hawaii. Fish. Bull. 107:464<U+0096>476.
 ## 59                                                                                                                                                                                                                                                                                            <NA>
 ## 60                                                                                                                                                                                                                                                                                            <NA>
 ## 61                                                                                                                                                                                                                                                                                            <NA>
@@ -4885,12 +4878,12 @@ meat
 ## 78                                                                                                                                                                                                                                                                                            <NA>
 ## 79                                                                                                                                                                                                                                                                                            <NA>
 ## 80                                                                                                                                                                                                                                                                                            <NA>
-## 81                                                                                                                                     Hyvarinen P, Huusko A. 2006. Diet of brown trout in relation to variation in abundance and size of pelagic fish prey. Journal of Fish Biology 68, 87\x9698.
+## 81                                                                                                                                 Hyvarinen P, Huusko A. 2006. Diet of brown trout in relation to variation in abundance and size of pelagic fish prey. Journal of Fish Biology 68, 87<U+0096>98.
 ## 82                                                                                                                                                                                                                                                                                            <NA>
 ## 83                                                                                                                                                                                                                                                                                            <NA>
 ## 84                                                                                                                                                                                                                                                                                            <NA>
 ## 85                                                                                                          Murie DJ. 1995. Comparative feeding ecology of two sympatric rockfish congeners, Sebastes caurinus (copper rockfish) and S. maliger (quillback rockfish). Marine Biology 124: 341-353.
-## 86                                                              Honda H, Masatoshi K. 1997. Size selective feeding and its limitations for the black rockfish, Sebastes inermis, in a demersal fish assemblage of Onagawa Bay, northeastern Japan. Environmental Biology of Fishes 50: 183\x96193.
+## 86                                                          Honda H, Masatoshi K. 1997. Size selective feeding and its limitations for the black rockfish, Sebastes inermis, in a demersal fish assemblage of Onagawa Bay, northeastern Japan. Environmental Biology of Fishes 50: 183<U+0096>193.
 ## 87                                                                                                          Murie DJ. 1995. Comparative feeding ecology of two sympatric rockfish congeners, Sebastes caurinus (copper rockfish) and S. maliger (quillback rockfish). Marine Biology 124: 341-353.
 ## 88                                                                                                                                                                                                                                                                                            <NA>
 ## 89                                                                                                                                                                                                                                                                                            <NA>
@@ -5018,31 +5011,31 @@ meat
 ## 211                                                                                                                                                                                                                                                                                           <NA>
 ## 212                                                                                                                                                                                                                                                                                           <NA>
 ## 213                                                                                                                                                                                                                                                                                           <NA>
-## 214                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 214                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 215                                                                                                                                                                                                                                                                                           <NA>
 ## 216                                                                                                                                                                                                                                                                                           <NA>
 ## 217                                                                                                                                                                                                                                                                                           <NA>
 ## 218                                                                                                                                                                                                                                                                                           <NA>
 ## 219                                                                                                                                                                                                                                                                                           <NA>
 ## 220                                                                                                                                                                                                                                                                                           <NA>
-## 221                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 221                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 222                                                                                                                                                                                                                                                                                           <NA>
 ## 223                                                                                                                                                                                                                                                                                           <NA>
 ## 224                                                                                                                                                                                                                                                                                           <NA>
-## 225                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
-## 226                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 225                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
+## 226                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 227                                                                                                                                                                                                                                                                                           <NA>
-## 228                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
-## 229                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
-## 230                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 228                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
+## 229                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
+## 230                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 231                                                                                                                                                                                                                                                                                           <NA>
-## 232                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 232                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 233                                                                                                                                                                                                                                                                                           <NA>
-## 234                                                                                                        Radloff FG, Du Toit JT. 2004. Large predators and their prey in a southern African savanna: a predator\x92s size determines its prey size range. Journal of Animal Ecology 73, 410-423.
-## 235                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 234                                                                                                    Radloff FG, Du Toit JT. 2004. Large predators and their prey in a southern African savanna: a predator<U+0092>s size determines its prey size range. Journal of Animal Ecology 73, 410-423.
+## 235                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 236                                                                                                                                                                                                                                                                                           <NA>
 ## 237                                                                                                                                                                                                                                                                                           <NA>
-## 238                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 238                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 239                                                                                                                                                                                                                                                                                           <NA>
 ## 240                                                                                                                                                                                                                                                                                           <NA>
 ## 241                                                                                                                                                                                                                                                                                           <NA>
@@ -5052,16 +5045,16 @@ meat
 ## 245                                                                                                                                                                                                                                                                                           <NA>
 ## 246                                                                                                                                                                                                                                                                                           <NA>
 ## 247                                                                                                                                                                                                                                                                                           <NA>
-## 248                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 248                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 249                                                                                                                                                                                                                                                                                           <NA>
-## 250                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
-## 251                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
-## 252                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
-## 253                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 250                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
+## 251                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
+## 252                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
+## 253                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 254                                                                                                                                                                                                                                                                                           <NA>
 ## 255                                                                                                                                                                                                                                                                                           <NA>
 ## 256                                                                                                                                                                                                                                                                                           <NA>
-## 257                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 257                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 258                                                                                                                                                                                                                                                                                           <NA>
 ## 259                                                                                                                                                                                                                                                                                           <NA>
 ## 260                                                                                                                                                                                                                                                                                           <NA>
@@ -5096,14 +5089,14 @@ meat
 ## 289                                                                                                                                                                                                                                                                                           <NA>
 ## 290                                                                                                                                                                                                                                                                                           <NA>
 ## 291                                                                                                                                                                                                                                                                                           <NA>
-## 292                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
-## 293                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 292                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
+## 293                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 294                                                                                                                                                                                                                                                                                           <NA>
 ## 295                                                                                                                                                                                                                                                                                           <NA>
 ## 296                                                                                                                                                                                                                                                                                           <NA>
 ## 297                                                                                                              Weatherhead PJ, Blouin-Demers G, Cavey KM. 2003. Seasonal and Prey-size Dietary Patterns of Black Ratsnakes (Elaphe obsoleta obsoleta). American Midland Naturalist 150, 275-281.
 ## 298                                                                                                                                                                                                                                                                                           <NA>
-## 299                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 299                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 300                                                                                                                                                                                                                                                                                           <NA>
 ## 301                                                                                                                                                                                                                                                                                           <NA>
 ## 302                                                                                                                                                                                                                                                                                           <NA>
@@ -5112,27 +5105,27 @@ meat
 ## 305                                                                                                                                                                             King RB. 2002. Predicted and Observed Maximum Prey Size - Snake Size Allometry. Functional Ecology 16(6), 766-772.
 ## 306                                                                                                                                                                                                                                                                                           <NA>
 ## 307                                                                                                                                                                                                                                                                                           <NA>
-## 308                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 308                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 309                                                                                                                                                                                                                                                                                           <NA>
 ## 310                                                                                                                                                                                                                                                                                           <NA>
 ## 311                                                                                                                                                                                                                                                                                           <NA>
 ## 312                                                                                                                                                                                                                                                                                           <NA>
-## 313                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 313                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 314                                                                                                                                                                                                                                                                                           <NA>
 ## 315                                                                                                                                                                                                                                                                                           <NA>
 ## 316                                                                                                                                                                                                                                                                                           <NA>
 ## 317                                                                                                                   Vincent SW, Herrel A, Irschick DJ. 2004. Sexual dimorphism in head shape and diet in the cottonmouth. Journal of Zoology, London 264, 53-59.\nsnake (Agkistrodon piscivorus)
 ## 318                                                                                                                                                                                                                                                                                           <NA>
-## 319 Martins M, Marques OAV, Sazima I. 2002. Ecological and phylogenetic correlates of feeding habits in Neotropical pitvipers of the genus Bothrops. In G. W. Schuett, M. E. Douglas, M. H\xf6ggren, and H. W. Greene (eds.), Biology of the Vipers. Eagle Mountain Publishing, Eagle Mountain, UT
-## 320                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 319 Martins M, Marques OAV, Sazima I. 2002. Ecological and phylogenetic correlates of feeding habits in Neotropical pitvipers of the genus Bothrops. In G. W. Schuett, M. E. Douglas, M. H<f6>ggren, and H. W. Greene (eds.), Biology of the Vipers. Eagle Mountain Publishing, Eagle Mountain, UT
+## 320                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 321                                                                                                                                                                                                                                                                                           <NA>
 ## 322                                                                                                                                                                                      Clark RW. 2002. Diet of the timber rattlesnake, Crotalus horridus. Journal of Herpetology 36(3), 494-499.
 ## 323                                                                                                                                                                                                                                                                                           <NA>
-## 324                                                                                            Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553\x961559.
+## 324                                                                                        Carbone C, Daryl C, Conrad S, Marcus C, Belby J. 2014. Geometric factors influencing the diet of vertebrate predators in marine and terrestrial environments. Ecology Letters 17(12): 1553<U+0096>1559.
 ## 325                                                                                                                                                                                                                                                                                           <NA>
 ## 326                                                                                                                                                                                                                                                                                           <NA>
 ## 327                                                                                                                                                                                                                                                                                           <NA>
-## 328                                                                                                                                   Shine R, Sun L-X. 2003. Attack strategy of an ambush predator: which attributes of the prey trigger a pit-viper\x92s strike? Functional Ecology 17, 340-348.
+## 328                                                                                                                               Shine R, Sun L-X. 2003. Attack strategy of an ambush predator: which attributes of the prey trigger a pit-viper<U+0092>s strike? Functional Ecology 17, 340-348.
 ## 329                                                                                                                                                                                                                                                                                           <NA>
 ## 330                                           Jaksic FM, Delibes M.1987. A Comparative Analysis of Food-Niche Relationships and Trophic Guild Structure in TwoAssemblages of Vertebrate Predators Differing in Species Richness: Causes, Correlations, and Consequences. Oecologia 71(3), 461-472.
 ## 331                                                                                                                                                                                                                                                                                           <NA>
@@ -5211,7 +5204,7 @@ plant
 ## 53        mammals                 Peter's dukier       mammalia
 ## 54        mammals                     bay dikier       mammalia
 ## 55        mammals               mountain gazelle       mammalia
-## 56        mammals           G\xfcnther's dik-dik       mammalia
+## 56        mammals           G<fc>nther's dik-dik       mammalia
 ## 57        mammals                  mountain goat       mammalia
 ## 58        mammals                         argali       mammalia
 ## 59        mammals                  bighorn sheep       mammalia
@@ -5330,7 +5323,7 @@ plant
 ## 172       mammals             Indian desert jird       mammalia
 ## 173       mammals            broad-toothed mouse       mammalia
 ## 174       mammals             Malagasy giant rat       mammalia
-## 175       mammals       White-bellied\xa0nesomys       mammalia
+## 175       mammals   White-bellied<U+00A0>nesomys       mammalia
 ## 176       mammals                   island mouse       mammalia
 ## 177       mammals                         coruro       mammalia
 ## 178       mammals              Siberian chipmunk       mammalia
@@ -5839,234 +5832,234 @@ plant
 ## 225          telemetry   24     1522.00  3.1824147
 ## 226          telemetry   29     1018.00  3.0077478
 ## 227          telemetry    9      222.00  2.3463530
-##                                                                                                                                                                                       alternative.mass.reference
-## 1                                                                                                                                                                                                           <NA>
-## 2                                                                                                                                                                                                           <NA>
-## 3                                                                                                                                                                                                           <NA>
-## 4                                                                                                                                                                                                           <NA>
-## 5                                                                                                                                                                                                           <NA>
-## 6                                                                                                                                                                                                           <NA>
-## 7                                                                                                                                                                                                           <NA>
-## 8                                                                                                                                                                                                           <NA>
-## 9                                                                                                                                                                                                           <NA>
-## 10                                                                                                                                                                                                          <NA>
-## 11                                                                                                                                                                                                          <NA>
-## 12                                                                                                                                                                                                          <NA>
-## 13                                                                                                                                                                                                          <NA>
-## 14                                                                                                                                                                                                          <NA>
-## 15                                                                                                                                                                                                          <NA>
-## 16                                                                                                                                                                                                          <NA>
-## 17                                                                                                                                                                                                          <NA>
-## 18                                                                                                                                                                                                          <NA>
-## 19                                                                                                                                                                                                          <NA>
-## 20                                                                                                                                                                                                          <NA>
-## 21                                                                                                                                                                                                          <NA>
-## 22                                                                                                                                                                                                          <NA>
-## 23                                                                                                                                                                                                          <NA>
-## 24                                                                                                                                                                                                          <NA>
-## 25                                                                                                                                                                                                          <NA>
-## 26                                                                                                                         Beck TDI, Brain CE. 1978. Weights of Colorado Sage Grouse. The Condor 80(2), 241-243.
-## 27                                                                                                                                                                                                          <NA>
-## 28                                                                                                                                                                                                          <NA>
-## 29                                                                                                                                                                                                          <NA>
-## 30                                                                                                                                                                                                          <NA>
-## 31                                                                                                                                                                                                          <NA>
-## 32                                                                                                                                                                                                          <NA>
-## 33                                        Keiss O, Granats J, Mednis A. 2004. Use of biometrical data to study Corncrake Crex crex population in Latvia. Acta Universitatis Latviensis, Biology 676, 119\x96126.
-## 34                                                                                                                                                                                                          <NA>
-## 35  Sabat P, Ramirez-Otatola , Barcelo G, Salinas J, Bozinovic F. Comparative basal metabolic rate among passerines and the food habit hypothesis. Comparative Biochemistry and Physiology Part A 157, 35\x9640.
-## 36                                                                                                                                                                                                          <NA>
-## 37                                                                                                                                                                                                          <NA>
-## 38                                                                                                                                                                                                          <NA>
-## 39                                                     Frith CB, Frith DW. 2001. Morphology, Moult and Survival in Three Sympatric Bowerbirds in Australian Wet Tropics Upland Rainforest. Corella 25(3): 41-60.
-## 40                                                                                                                                                                                                          <NA>
-## 41                                             Forsyth DM, Wilmhurst JM, Allen RB, Coomes DA. Impacts of introduced deer and extinct moa on New Zealand ecosystems. New Zealand Journal of Ecology 34(1), 48-65.
-## 42                                             Forsyth DM, Wilmhurst JM, Allen RB, Coomes DA. Impacts of introduced deer and extinct moa on New Zealand ecosystems. New Zealand Journal of Ecology 34(1), 48-65.
-## 43                                                                                                                                                                                                          <NA>
-## 44                                                                                                                                                                                                          <NA>
-## 45                                                                                                                                                                                                          <NA>
-## 46                                                                                                                                                                                                          <NA>
-## 47                                                                                                                                                                                                          <NA>
-## 48                                                                                                                                                                                                          <NA>
-## 49                                                                                                                                                                                                          <NA>
-## 50                                                                                                                                                                                                          <NA>
-## 51                                                                                                                                                                                                          <NA>
-## 52                                                                                                                                                                                                          <NA>
-## 53                                                                                                                                                                                                          <NA>
-## 54                                                                                                                                                                                                          <NA>
-## 55                                                                                                                                                                                                          <NA>
-## 56                                                                                                                                                                                                          <NA>
-## 57                                                                                                                                                                                                          <NA>
-## 58                                                                                                                                                                                                          <NA>
-## 59                                                                                                                                                                                                          <NA>
-## 60                                                                                                                                                                                                          <NA>
-## 61                                                                                                                                                                                                          <NA>
-## 62                                                                                                                                                                                                          <NA>
-## 63                                                                                                                                                                                                          <NA>
-## 64                                                                                                                                                                                                          <NA>
-## 65                                                                                                                                                                                                          <NA>
-## 66                                                                                                                                                                                                          <NA>
-## 67                                                                                                                                                                                                          <NA>
-## 68                                                                                                                                                                                                          <NA>
-## 69                                                                                                                                                                                                          <NA>
-## 70                                                                                                                                                                                                          <NA>
-## 71                                                                                                                                                                                                          <NA>
-## 72                                                                                                                                                                                                          <NA>
-## 73                                                                                                                                                                                                          <NA>
-## 74                                                                                                                                                                                                          <NA>
-## 75                                                                                                                                                                                                          <NA>
-## 76                                                                                                                                                                                                          <NA>
-## 77                                                                                                                                                                                                          <NA>
-## 78                                                                                                                                                                                                          <NA>
-## 79                                                                                                                                                                                                          <NA>
-## 80                                                                                                                                                                                                          <NA>
-## 81                                                                                                                                                                                                          <NA>
-## 82                                                                                                                                                                                                          <NA>
-## 83                                                                                                                                                                                                          <NA>
-## 84                                                                                                                                                                                                          <NA>
-## 85                                                                                                                                                                                                          <NA>
-## 86                                                                                                                                                                                                          <NA>
-## 87                                                                                                                                                                                                          <NA>
-## 88                                                                                                                                                                                                          <NA>
-## 89                                                                                                                                                                                                          <NA>
-## 90                                                                                                                                                                                                          <NA>
-## 91                                                                                                                                                                                                          <NA>
-## 92                                                                                                                                                                                                          <NA>
-## 93                                                                                                                                                                                                          <NA>
-## 94                                                                                                                                                                                                          <NA>
-## 95                                                                                                                                                                                                          <NA>
-## 96                                                                                                                                                                                                          <NA>
-## 97                                                                                                                                                                                                          <NA>
-## 98                                                                                                                                                                                                          <NA>
-## 99                                                                                                                                                                                                          <NA>
-## 100                                                                                                                                                                                                         <NA>
-## 101                                                                                                                                                                                                         <NA>
-## 102                                                                                                                                                                                                         <NA>
-## 103                                                                                                                                                                                                         <NA>
-## 104                                                                                                                                                                                                         <NA>
-## 105                                                                                                                                                                                                         <NA>
-## 106                                                                                                                                                                                                         <NA>
-## 107                                                                                                                                                                                                         <NA>
-## 108                                                                                                                                                                                                         <NA>
-## 109                                                                                                                                                                                                         <NA>
-## 110                                                                                                                                                                                                         <NA>
-## 111                                                                                                                                                                                                         <NA>
-## 112                                                                                                                                                                                                         <NA>
-## 113                                                                                                                                                                                                         <NA>
-## 114                                                                                                                                                                                                         <NA>
-## 115                                                                                                                                                                                                         <NA>
-## 116                                                                                                                                                                                                         <NA>
-## 117                                                                                                                                                                                                         <NA>
-## 118                                                                                                                                                                                                         <NA>
-## 119                                                                                                                                                                                                         <NA>
-## 120                                                                                                                                                                                                         <NA>
-## 121                                                                                                                                                                                                         <NA>
-## 122                                                                                                                                                                                                         <NA>
-## 123                                                                                                                                                                                                         <NA>
-## 124                                                                                                                                                                                                         <NA>
-## 125                                                                                                                                                                                                         <NA>
-## 126                                                                                                                                                                                                         <NA>
-## 127                                                                                                                                                                                                         <NA>
-## 128                                                                                                                                                                                                         <NA>
-## 129                                                                                                                                                                                                         <NA>
-## 130                                                                                                                                                                                                         <NA>
-## 131                                                                                                                                                                                                         <NA>
-## 132                                                                                                                                                                                                         <NA>
-## 133                                                                                                                                                                                                         <NA>
-## 134                                                                                                                                                                                                         <NA>
-## 135                                                                                                                                                                                                         <NA>
-## 136                                                                                                                                                                                                         <NA>
-## 137                                                                                                                                                                                                         <NA>
-## 138                                                                                                                                                                                                         <NA>
-## 139                                                                                                                                                                                                         <NA>
-## 140                                                                                                                                                                                                         <NA>
-## 141                                                                                                                                                                                                         <NA>
-## 142                                                                                                                                                                                                         <NA>
-## 143                                                                                                                                                                                                         <NA>
-## 144                                                                                                                                                                                                         <NA>
-## 145                                                                                                                                                                                                         <NA>
-## 146                                                                                                                                                                                                         <NA>
-## 147                                                                                                                                                                                                         <NA>
-## 148                                                                                                                                                                                                         <NA>
-## 149                                                                                                                                                                                                         <NA>
-## 150                                                                                                                                                                                                         <NA>
-## 151                                                                                                                                                                                                         <NA>
-## 152                                                                                                                                                                                                         <NA>
-## 153                                                                                                                                                                                                         <NA>
-## 154                                                                                                                                                                                                         <NA>
-## 155                                                                                                                                                                                                         <NA>
-## 156                                                                                                                                                                                                         <NA>
-## 157                                                                                                                                                                                                         <NA>
-## 158                                                                                                                                                                                                         <NA>
-## 159                                                                                                                                                                                                         <NA>
-## 160                                                                                                                                                                                                         <NA>
-## 161                                                                                                                                                                                                         <NA>
-## 162                                                                                                                                                                                                         <NA>
-## 163                                                                                                                                                                                                         <NA>
-## 164                                                                                                                                                                                                         <NA>
-## 165                                                                                                                                                                                                         <NA>
-## 166                                                                                                                                                                                                         <NA>
-## 167                                                                                                                                                                                                         <NA>
-## 168                                                                                                                                                                                                         <NA>
-## 169                                                                                                                                                                                                         <NA>
-## 170                                                                                                                                                                                                         <NA>
-## 171                                                                                                                                                                                                         <NA>
-## 172                                                                                                                                                                                                         <NA>
-## 173                                                                                                                                                                                                         <NA>
-## 174                                                                                                                                                                                                         <NA>
-## 175                                                                                                                                                                                                         <NA>
-## 176                                                                                                                                                                                                         <NA>
-## 177                                                                                                                                                                                                         <NA>
-## 178                                                                                                                                                                                                         <NA>
-## 179                                                                                                                                                                                                         <NA>
-## 180                                                                                                                                                                                                         <NA>
-## 181                                                                                                                                                                                                         <NA>
-## 182                                                                                                                                                                                                         <NA>
-## 183                                                                                                                                                                                                         <NA>
-## 184                                                                                                                                                                                                         <NA>
-## 185                                                                                                                                                                                                         <NA>
-## 186                                                                                                                                                                                                         <NA>
-## 187                                                                                                                                                                                                         <NA>
-## 188                                                                                                                                                                                                         <NA>
-## 189                                                                                                                                                                                                         <NA>
-## 190                                                                                                                                                                                                         <NA>
-## 191                                                                                                                                                                                                         <NA>
-## 192                                                                                                                                                                                                         <NA>
-## 193                                                                                                                                                                                                         <NA>
-## 194                                                                                                                                                                                                         <NA>
-## 195                                                                                                                                                                                                         <NA>
-## 196                                                                                                                                                                                                         <NA>
-## 197                                                                                                                                                                                                         <NA>
-## 198                                                                                                                                                                                                         <NA>
-## 199                                                                                                                                                                                                         <NA>
-## 200                                                                                                                                                                                                         <NA>
-## 201                                                                                                                                                                                                         <NA>
-## 202                                                                                                                                                                                                         <NA>
-## 203                                                                                                                                                                                                         <NA>
-## 204                                                                                                                                                                                                         <NA>
-## 205                                                                                                                                                                                                         <NA>
-## 206                                                                                                                                                                                                         <NA>
-## 207                                                                                                                                                                                                         <NA>
-## 208                                                                                                                                                                                                         <NA>
-## 209                                                                                                                                                                                                         <NA>
-## 210                                                                                                                                                                                                         <NA>
-## 211                                                                                                                                                                                                         <NA>
-## 212                                                                                                                                                                                                         <NA>
-## 213                                                                                                                                                                                                         <NA>
-## 214                                                                                                                                                                                                         <NA>
-## 215                                                                                                                                                                                                         <NA>
-## 216                                                                                                                                                                                                         <NA>
-## 217                                                                                                                                                                                                         <NA>
-## 218                                                                                                                                                                                                         <NA>
-## 219                                                                                                                                                                                                         <NA>
-## 220                                                                                                                                                                                                         <NA>
-## 221                                                                                                                                                                                                         <NA>
-## 222                                                                                                                                                                                                         <NA>
-## 223                                                                                                                                                                                                         <NA>
-## 224                                                                                                                                                                                                         <NA>
-## 225                                                                                                                                                                                                         <NA>
-## 226                                                                                                                                                                                                         <NA>
-## 227                                                                                                                                                                                                         <NA>
+##                                                                                                                                                                                           alternative.mass.reference
+## 1                                                                                                                                                                                                               <NA>
+## 2                                                                                                                                                                                                               <NA>
+## 3                                                                                                                                                                                                               <NA>
+## 4                                                                                                                                                                                                               <NA>
+## 5                                                                                                                                                                                                               <NA>
+## 6                                                                                                                                                                                                               <NA>
+## 7                                                                                                                                                                                                               <NA>
+## 8                                                                                                                                                                                                               <NA>
+## 9                                                                                                                                                                                                               <NA>
+## 10                                                                                                                                                                                                              <NA>
+## 11                                                                                                                                                                                                              <NA>
+## 12                                                                                                                                                                                                              <NA>
+## 13                                                                                                                                                                                                              <NA>
+## 14                                                                                                                                                                                                              <NA>
+## 15                                                                                                                                                                                                              <NA>
+## 16                                                                                                                                                                                                              <NA>
+## 17                                                                                                                                                                                                              <NA>
+## 18                                                                                                                                                                                                              <NA>
+## 19                                                                                                                                                                                                              <NA>
+## 20                                                                                                                                                                                                              <NA>
+## 21                                                                                                                                                                                                              <NA>
+## 22                                                                                                                                                                                                              <NA>
+## 23                                                                                                                                                                                                              <NA>
+## 24                                                                                                                                                                                                              <NA>
+## 25                                                                                                                                                                                                              <NA>
+## 26                                                                                                                             Beck TDI, Brain CE. 1978. Weights of Colorado Sage Grouse. The Condor 80(2), 241-243.
+## 27                                                                                                                                                                                                              <NA>
+## 28                                                                                                                                                                                                              <NA>
+## 29                                                                                                                                                                                                              <NA>
+## 30                                                                                                                                                                                                              <NA>
+## 31                                                                                                                                                                                                              <NA>
+## 32                                                                                                                                                                                                              <NA>
+## 33                                        Keiss O, Granats J, Mednis A. 2004. Use of biometrical data to study Corncrake Crex crex population in Latvia. Acta Universitatis Latviensis, Biology 676, 119<U+0096>126.
+## 34                                                                                                                                                                                                              <NA>
+## 35  Sabat P, Ramirez-Otatola , Barcelo G, Salinas J, Bozinovic F. Comparative basal metabolic rate among passerines and the food habit hypothesis. Comparative Biochemistry and Physiology Part A 157, 35<U+0096>40.
+## 36                                                                                                                                                                                                              <NA>
+## 37                                                                                                                                                                                                              <NA>
+## 38                                                                                                                                                                                                              <NA>
+## 39                                                         Frith CB, Frith DW. 2001. Morphology, Moult and Survival in Three Sympatric Bowerbirds in Australian Wet Tropics Upland Rainforest. Corella 25(3): 41-60.
+## 40                                                                                                                                                                                                              <NA>
+## 41                                                 Forsyth DM, Wilmhurst JM, Allen RB, Coomes DA. Impacts of introduced deer and extinct moa on New Zealand ecosystems. New Zealand Journal of Ecology 34(1), 48-65.
+## 42                                                 Forsyth DM, Wilmhurst JM, Allen RB, Coomes DA. Impacts of introduced deer and extinct moa on New Zealand ecosystems. New Zealand Journal of Ecology 34(1), 48-65.
+## 43                                                                                                                                                                                                              <NA>
+## 44                                                                                                                                                                                                              <NA>
+## 45                                                                                                                                                                                                              <NA>
+## 46                                                                                                                                                                                                              <NA>
+## 47                                                                                                                                                                                                              <NA>
+## 48                                                                                                                                                                                                              <NA>
+## 49                                                                                                                                                                                                              <NA>
+## 50                                                                                                                                                                                                              <NA>
+## 51                                                                                                                                                                                                              <NA>
+## 52                                                                                                                                                                                                              <NA>
+## 53                                                                                                                                                                                                              <NA>
+## 54                                                                                                                                                                                                              <NA>
+## 55                                                                                                                                                                                                              <NA>
+## 56                                                                                                                                                                                                              <NA>
+## 57                                                                                                                                                                                                              <NA>
+## 58                                                                                                                                                                                                              <NA>
+## 59                                                                                                                                                                                                              <NA>
+## 60                                                                                                                                                                                                              <NA>
+## 61                                                                                                                                                                                                              <NA>
+## 62                                                                                                                                                                                                              <NA>
+## 63                                                                                                                                                                                                              <NA>
+## 64                                                                                                                                                                                                              <NA>
+## 65                                                                                                                                                                                                              <NA>
+## 66                                                                                                                                                                                                              <NA>
+## 67                                                                                                                                                                                                              <NA>
+## 68                                                                                                                                                                                                              <NA>
+## 69                                                                                                                                                                                                              <NA>
+## 70                                                                                                                                                                                                              <NA>
+## 71                                                                                                                                                                                                              <NA>
+## 72                                                                                                                                                                                                              <NA>
+## 73                                                                                                                                                                                                              <NA>
+## 74                                                                                                                                                                                                              <NA>
+## 75                                                                                                                                                                                                              <NA>
+## 76                                                                                                                                                                                                              <NA>
+## 77                                                                                                                                                                                                              <NA>
+## 78                                                                                                                                                                                                              <NA>
+## 79                                                                                                                                                                                                              <NA>
+## 80                                                                                                                                                                                                              <NA>
+## 81                                                                                                                                                                                                              <NA>
+## 82                                                                                                                                                                                                              <NA>
+## 83                                                                                                                                                                                                              <NA>
+## 84                                                                                                                                                                                                              <NA>
+## 85                                                                                                                                                                                                              <NA>
+## 86                                                                                                                                                                                                              <NA>
+## 87                                                                                                                                                                                                              <NA>
+## 88                                                                                                                                                                                                              <NA>
+## 89                                                                                                                                                                                                              <NA>
+## 90                                                                                                                                                                                                              <NA>
+## 91                                                                                                                                                                                                              <NA>
+## 92                                                                                                                                                                                                              <NA>
+## 93                                                                                                                                                                                                              <NA>
+## 94                                                                                                                                                                                                              <NA>
+## 95                                                                                                                                                                                                              <NA>
+## 96                                                                                                                                                                                                              <NA>
+## 97                                                                                                                                                                                                              <NA>
+## 98                                                                                                                                                                                                              <NA>
+## 99                                                                                                                                                                                                              <NA>
+## 100                                                                                                                                                                                                             <NA>
+## 101                                                                                                                                                                                                             <NA>
+## 102                                                                                                                                                                                                             <NA>
+## 103                                                                                                                                                                                                             <NA>
+## 104                                                                                                                                                                                                             <NA>
+## 105                                                                                                                                                                                                             <NA>
+## 106                                                                                                                                                                                                             <NA>
+## 107                                                                                                                                                                                                             <NA>
+## 108                                                                                                                                                                                                             <NA>
+## 109                                                                                                                                                                                                             <NA>
+## 110                                                                                                                                                                                                             <NA>
+## 111                                                                                                                                                                                                             <NA>
+## 112                                                                                                                                                                                                             <NA>
+## 113                                                                                                                                                                                                             <NA>
+## 114                                                                                                                                                                                                             <NA>
+## 115                                                                                                                                                                                                             <NA>
+## 116                                                                                                                                                                                                             <NA>
+## 117                                                                                                                                                                                                             <NA>
+## 118                                                                                                                                                                                                             <NA>
+## 119                                                                                                                                                                                                             <NA>
+## 120                                                                                                                                                                                                             <NA>
+## 121                                                                                                                                                                                                             <NA>
+## 122                                                                                                                                                                                                             <NA>
+## 123                                                                                                                                                                                                             <NA>
+## 124                                                                                                                                                                                                             <NA>
+## 125                                                                                                                                                                                                             <NA>
+## 126                                                                                                                                                                                                             <NA>
+## 127                                                                                                                                                                                                             <NA>
+## 128                                                                                                                                                                                                             <NA>
+## 129                                                                                                                                                                                                             <NA>
+## 130                                                                                                                                                                                                             <NA>
+## 131                                                                                                                                                                                                             <NA>
+## 132                                                                                                                                                                                                             <NA>
+## 133                                                                                                                                                                                                             <NA>
+## 134                                                                                                                                                                                                             <NA>
+## 135                                                                                                                                                                                                             <NA>
+## 136                                                                                                                                                                                                             <NA>
+## 137                                                                                                                                                                                                             <NA>
+## 138                                                                                                                                                                                                             <NA>
+## 139                                                                                                                                                                                                             <NA>
+## 140                                                                                                                                                                                                             <NA>
+## 141                                                                                                                                                                                                             <NA>
+## 142                                                                                                                                                                                                             <NA>
+## 143                                                                                                                                                                                                             <NA>
+## 144                                                                                                                                                                                                             <NA>
+## 145                                                                                                                                                                                                             <NA>
+## 146                                                                                                                                                                                                             <NA>
+## 147                                                                                                                                                                                                             <NA>
+## 148                                                                                                                                                                                                             <NA>
+## 149                                                                                                                                                                                                             <NA>
+## 150                                                                                                                                                                                                             <NA>
+## 151                                                                                                                                                                                                             <NA>
+## 152                                                                                                                                                                                                             <NA>
+## 153                                                                                                                                                                                                             <NA>
+## 154                                                                                                                                                                                                             <NA>
+## 155                                                                                                                                                                                                             <NA>
+## 156                                                                                                                                                                                                             <NA>
+## 157                                                                                                                                                                                                             <NA>
+## 158                                                                                                                                                                                                             <NA>
+## 159                                                                                                                                                                                                             <NA>
+## 160                                                                                                                                                                                                             <NA>
+## 161                                                                                                                                                                                                             <NA>
+## 162                                                                                                                                                                                                             <NA>
+## 163                                                                                                                                                                                                             <NA>
+## 164                                                                                                                                                                                                             <NA>
+## 165                                                                                                                                                                                                             <NA>
+## 166                                                                                                                                                                                                             <NA>
+## 167                                                                                                                                                                                                             <NA>
+## 168                                                                                                                                                                                                             <NA>
+## 169                                                                                                                                                                                                             <NA>
+## 170                                                                                                                                                                                                             <NA>
+## 171                                                                                                                                                                                                             <NA>
+## 172                                                                                                                                                                                                             <NA>
+## 173                                                                                                                                                                                                             <NA>
+## 174                                                                                                                                                                                                             <NA>
+## 175                                                                                                                                                                                                             <NA>
+## 176                                                                                                                                                                                                             <NA>
+## 177                                                                                                                                                                                                             <NA>
+## 178                                                                                                                                                                                                             <NA>
+## 179                                                                                                                                                                                                             <NA>
+## 180                                                                                                                                                                                                             <NA>
+## 181                                                                                                                                                                                                             <NA>
+## 182                                                                                                                                                                                                             <NA>
+## 183                                                                                                                                                                                                             <NA>
+## 184                                                                                                                                                                                                             <NA>
+## 185                                                                                                                                                                                                             <NA>
+## 186                                                                                                                                                                                                             <NA>
+## 187                                                                                                                                                                                                             <NA>
+## 188                                                                                                                                                                                                             <NA>
+## 189                                                                                                                                                                                                             <NA>
+## 190                                                                                                                                                                                                             <NA>
+## 191                                                                                                                                                                                                             <NA>
+## 192                                                                                                                                                                                                             <NA>
+## 193                                                                                                                                                                                                             <NA>
+## 194                                                                                                                                                                                                             <NA>
+## 195                                                                                                                                                                                                             <NA>
+## 196                                                                                                                                                                                                             <NA>
+## 197                                                                                                                                                                                                             <NA>
+## 198                                                                                                                                                                                                             <NA>
+## 199                                                                                                                                                                                                             <NA>
+## 200                                                                                                                                                                                                             <NA>
+## 201                                                                                                                                                                                                             <NA>
+## 202                                                                                                                                                                                                             <NA>
+## 203                                                                                                                                                                                                             <NA>
+## 204                                                                                                                                                                                                             <NA>
+## 205                                                                                                                                                                                                             <NA>
+## 206                                                                                                                                                                                                             <NA>
+## 207                                                                                                                                                                                                             <NA>
+## 208                                                                                                                                                                                                             <NA>
+## 209                                                                                                                                                                                                             <NA>
+## 210                                                                                                                                                                                                             <NA>
+## 211                                                                                                                                                                                                             <NA>
+## 212                                                                                                                                                                                                             <NA>
+## 213                                                                                                                                                                                                             <NA>
+## 214                                                                                                                                                                                                             <NA>
+## 215                                                                                                                                                                                                             <NA>
+## 216                                                                                                                                                                                                             <NA>
+## 217                                                                                                                                                                                                             <NA>
+## 218                                                                                                                                                                                                             <NA>
+## 219                                                                                                                                                                                                             <NA>
+## 220                                                                                                                                                                                                             <NA>
+## 221                                                                                                                                                                                                             <NA>
+## 222                                                                                                                                                                                                             <NA>
+## 223                                                                                                                                                                                                             <NA>
+## 224                                                                                                                                                                                                             <NA>
+## 225                                                                                                                                                                                                             <NA>
+## 226                                                                                                                                                                                                             <NA>
+## 227                                                                                                                                                                                                             <NA>
 ##      mean.hra.m2   log10.hra
 ## 1   1.113000e+01  1.04649516
 ## 2   3.209286e+04  4.50640842
@@ -6295,234 +6288,234 @@ plant
 ## 225 3.790000e+04  4.57863921
 ## 226 5.700000e+05  5.75587486
 ## 227 1.417000e+05  5.15136985
-##                                                                                                                                                                                                                                                                                                                   hra.reference
-## 1                                                                                                                                                                                  Nursall JR. 1974. Some Territorial Behavioral Attributes of the Surgeonfish Acanthurus lineatus at Heron Island, Queensland. Copeia 950-959.
-## 2                                                                                                                         Marshell A, Mills JS, Rhodes KL, et al. 2011. Passive acoustic telemetry reveals highly variable home range and movement patterns among unicornfish within a marine reserve. Coral Reefs 30, 631-642.
-## 3                                                                                                                         Marshell A, Mills JS, Rhodes KL, et al. 2011. Passive acoustic telemetry reveals highly variable home range and movement patterns among unicornfish within a marine reserve. Coral Reefs 30, 631-642.
-## 4                                                                                                                                                                                Nursall JR. 1977. Territoriality in Redlip blennies (Ophioblennius atlanticus - Pisces : Blenniidae). Journal of Zoology, London 182, 205-223.
-## 5                                                                                   Eristhee N, Oxenford HA. 2001. Home range size and use of space by Bermuda chub Kyphosus sectatrix (L.) in two marine reserves in the Soufri\xe8re Marine Management Area, St Lucia, West Indies. Journal of Fisheries Biology 59, 129-151.
-## 6                                                                                                                                                                                                        Luckhurst BE, Luckhurst K. 1978. Diurnal Space Utilization in Coral Reef Fish Communities. Marine Biology 49, 325-332.
-## 7                                                                                                                                                           Mapstone GM, Wood EM. 1975. The ethology of Abudefduf luridus and Chromis chromis (Pisces: Pomacentridae) from the Azores. Journal of Zoology, London 175, 179-199.
-## 8                                                                                                                                                                           Keenleyside MHA. 1972. The Behaviour of Abudefduf zonatus (Pisces, Pomacentridae) at Heron Island, Great Barrier Reef. Animal Behavior 20, 763-774.
-## 9                                                                                                                          Sale PF. 1974. Mechanisms of co-existence in a guild of territorial fishes at Heron Island. pp. 193-206. In: Proc. Second Intern. Symp. Coral Reefs, Vol. 1, Great Barrier Reef Committee. Brisbane.
-## 10                                                                                                                                                                                                  Sale PF. 1978. Coexistence of coral reef fishes - a lottery for living space. Environmental Biology of Fishes 3(1), 85-102.
-## 11                                                                                                                                                                                                       Luckhurst BE, Luckhurst K. 1978. Diurnal Space Utilization in Coral Reef Fish Communities. Marine Biology 49, 325-332.
-## 12                                                                                                                                                                         Gronell A. 1980. Space utilization by the cocoa damselfish Eupomacentrus variabilis (Pisces: Pomacentridae). Bulletin of Marine Science 30, 237-251.
-## 13                                                                                                                            Welsh JQ, Bellwood DR. 2011. Spatial ecology of the steephead parrotfish (Chlorurus microrhinos): an evaluation using acoustic telemetry. Coral Reefs 31, 55-65. (doi: 10.1007/s00338-011-0813-8)
-## 14                                                                                                                                     Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
-## 15                                                                                                                                                  Welsh JQ, Bellwood DR. .2012. How far do schools of roving herbivores rove? A case study using Scarus rivulatus. Coral Reefs 31, 991-1003. (doi: 10.1007/s00338-012-0922-z)
-## 16                                                                                                                                     Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
-## 17                                                                                                                                     Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
-## 18                                                                                                                                     Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
-## 19                                                                                                                                     Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
-## 20                                                                                                            Jadot C, Donnay A, Acolas ML, et al. 2006. Activity patterns, home-range size, and habitat utilization of Sarpa salpa (Teleostei: Sparidae) in the Mediterranean Sea. ICES Journal of Marine Science 63, 128-139.
-## 21                                                                                                            Namgail T, Takekawa JY, Balachandran S, Sathiyaselvam P, Mundkur T, Newman SH. 2014. Space use of wintering waterbirds in India: Influence of trophic ecology on home-range size. Current Zoology 60(5), 616-621.
-## 22                                                                                                                                                                                                                                          Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
-## 23                                                                                                                                       Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 24                                                                                                                                       Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 25                                                                                                                                       Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 26                                                                                                                                                                            Eng RL, Schladweiler P. 1972. Sage Grouse Winter Movements and Habitat Use in Central Montana. The Journal of Wildlife Management 36(1), 141-146.
-## 27                                                                                                                                                                                                                                          Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
-## 28                                                                                                                                                                                                                                          Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
-## 29                                                                                                                                       Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 30                                                                                                                                       Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 31                                                                                                                                       Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 32  Patten, M. A., C. L. Pruett, and D. H. Wolfe. 2011. Home range size and movements of Greater Prairie-Chickens. Pp. 51\x9662 in B. K. Sandercock, K. Martin, and G. Segelbacher (editors). Ecology, conservation, and management of grouse. Studies in Avian Biology (no. 39), University of California Press, Berkeley, CA.
-## 33                                                                                                                                                                      Grabovsky VI. 1993.Spatial Distribution and Spacing Behaviour of Males in a Russion Corncrake (Crex crex) Population. Gibier Faune Sauvage 10, 259-279.
-## 34                                                                                                                                                                                                                                          Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
-## 35                        Nolazco S, Sanchez AM, Roper JJ. 2014. Tama\xf1o poblacional, distribuci\xf3n y \xe1mbito de hogar de la Cortarrama Peruana (Phytotoma raimondii) en el Santuario Hist\xf3rico Bosque de P\xf3mac, Lambayeque, Per\xfa. Bolet\xedn de la Uni\xf3n de Ornit\xf3logos del Per\xfa (UNOP), 9 (2): 5-19 .
-## 36                                                                                                                                                                                                                                          Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
-## 37                                                                                                                                                                                                                                          Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
-## 38                                                                                                                                       Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
-## 39                                                                                                                                                                    Frith CB, Frith DW. 2001. Morphology, Moult, and Survival in Three Sympatric Bowerirds in Australian Wet Tropics Upland Rainforest. Corella 25(3), 41-60.
-## 40                                                                                                                                                                                                       Farrimond M, Clout MN. 2006. Home range size of kakapo (Strigops habroptilus) on Codfish Island. Notornis 53, 150-152.
-## 41                                                                                                                                            Bellis LM, Martella MB, Navarro JL, Vignolo PE. 2004. Home range of greater and lesser rhea in Argentina: relevance to conservation. Biodiversity and Conservation 13, 2589-2598.
-## 42                                                                                                                                            Bellis LM, Martella MB, Navarro JL, Vignolo PE. 2004. Home range of greater and lesser rhea in Argentina: relevance to conservation. Biodiversity and Conservation 13, 2589-2598.
-## 43                                                                                                                Williams JB, Siegfried WR, Milton SJ, Adams NJ, Dean WRT, du Plessis MA, Jackson S. 1993. Field Metabolism, Water Requirements, and Foraging Behavior of Wild Ostriches in the Namib. Ecology 74(2), 390-404.
-## 44                                                                                                                                                                                                                                          Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
-## 45                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 46                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 47                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 48                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 49                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 50                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 51                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 52                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 53                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 54                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 55                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 56                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 57                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 58                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 59                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 60                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 61                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 62                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 63                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 64                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 65                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 66                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 67                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 68                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 69                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 70                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 71                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 72                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 73                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 74                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 75                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 76                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 77                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 78                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 79                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 80                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 81                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 82                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 83                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 84                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 85                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 86                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 87                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 88                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 89                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 90                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 91                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 92                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 93                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 94                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 95                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 96                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 97                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 98                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 99                                                                                       Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 100                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 101                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 102                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 103                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 104                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 105                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 106                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 107                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 108                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 109                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 110                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 111                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 112                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 113                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 114                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 115                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 116                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 117                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 118                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 119                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 120                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 121                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 122                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 123                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 124                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 125                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 126                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 127                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 128                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 129                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 130                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 131                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 132                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 133                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 134                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 135                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 136                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 137                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 138                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 139                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 140                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 141                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 142                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 143                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 144                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 145                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 146                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 147                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 148                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 149                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 150                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 151                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 152                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 153                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 154                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 155                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 156                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 157                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 158                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 159                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 160                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 161                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 162                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 163                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 164                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 165                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 166                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 167                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 168                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 169                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 170                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 171                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 172                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 173                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 174                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 175                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 176                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 177                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 178                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 179                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 180                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 181                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 182                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 183                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 184                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 185                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 186                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 187                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 188                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 189                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 190                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 191                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 192                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 193                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 194                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 195                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 196                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 197                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 198                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 199                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 200                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 201                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 202                                                                                      Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
-## 203                                                                                                          Cunningham P. 2000. Daily activity pattern and diet of a population of the Spinytailed Lizard, Uromastyx aegyptius microlepis, during summer in the United Arab Emirates. Zoology in the Middle East 21(1), 37-46.
-## 204                                                                                                                                                     Christian KA, Tracy CR. 1985. Physical and biotic determinants of space utilization by the Galapagos land iguana (Conolophus pallidus). Oecologia (Berlin) 66, 132-140.
-## 205                                                                                                                                                                       Knapp CR, Owens AK. 2005. Home range and habitat associations of a Bahamian iguana: implications for conservation. Animal Conservation 8(3), 269-278.
-## 206                                                                                                                                        Goodman RM, Echternact AC, Burton FJ. 2005. Spatial Ecology of the Endangered Iguana, Cyclura lewisi, in a Disturbed Setting on Grand Cayman. Journal of Herpetology 39(3), 402-408.
-## 207                                                                                                                                 Mitchell NC. 1999. Effect of Introduced Ungulates on Density, Dietary Preferences, Home Range, and PhysicalCondition of the Iguana (Cyclura pinguis) on Anegada. Herpetologica 55(1), 7-17.
-## 208                                                                                                                                                                                  Smits AW. 1985. Behavioral and Dietary Responses to Aridity in the Chuckwalla, Sauromalus hispidus. Journal of Herpetology 19(4), 441-449.
-## 209                                                                                                                                                                    Johnson SR. 1965. An Ecological Study of the Chuckwalla, Sauromalus obesus Baird, in the Western Mojave Desert. American Midland Naturalist 73(1), 1-29.
-## 210                                                                                                                                                                                                   Alberts AC. 1993. Relationship of Space Use to Population Density in an Herbivorous Lizard. Herpetologica 49(4), 469-479.
-## 211                                                                                                                                                                                Borja MM. 1985. Spatial and Temporal behaviour of Gallotia galloti in a Natural Population of Tenerife. Bonn. Zool. Beitr. 36(3/4), 541-552.
-## 212                                                                                                               D\xedaz SA. 2007. Relevant autecological aspects for phymaturus flagellifer (reptilia, Tropiduridae) conservation in the altos de lircay national reserve, Maule region. Thesis, University of Chile, 41pp.\n
-## 213                                                                                                                                       Osterwalder K, Klingenbock A, Shine R. 2004. Field studies on a social lizard: Home range and social organization in an Australian skink, Egernia major. Austral Ecology 29, 241-249.
-## 214                                                                                                                               Bernstein NP, Richtsmeier RJ., Black RW, Montgomery BJ. 2007. Home Range and Philopatry in the Ornate Box Turtle, Terrapene ornata ornata, in Iowa. American Midland Naturalist 157, 162-174.
-## 215                                                                                              P\xe9rez-Santigosa N, Hidalgo-Vila J, D\xedaz-Paniagua C. 2013. Comparing Activity Patterns and Aquatic Home Range Areas Among Exotic and Native Turtles in Southern Spain. Chelonian Conservation and Biology 12(2), 313-319.
-## 216                                                  Monta\xf1o RR, Cu\xe9llar E, Fitzgerald LA, Soria F, Mendoza F, Pe\xf1a R, Dosapey T, Deem SL, Noss AJ. 2013. Ranging patterns by the red-footed tortoise - Geochelone carbonaria (Testudines: Testudinidae) - in the Bolivian Chaco. Ecolog\xeda en Bolivia 48(1), 17-30.
-## 217                                                                                                                                                                   Duda JJ, Krzysik AJ, Freilich JE. 1999. Effects of Drought on Desert Tortoise Movement and Activity. The Journal of Wildlife Management 63(4), 1181-1192.
-## 218                                                                                                                                                                                   Diemer JE. 1992. Home Range and Movements of the Tortoise Gopherus polyphemus in Northern Florida. Journal of Herpetology 26(2), 158-165.
-## 219                                                                                                                                                                    Vasudevan, K., Pandav, B & Deepak, V. 2010.Ecology of two endemic turtles in the Western Ghats. Final Technical Report, Wildlife Institute of India 74p.
-## 220                                                                                                                                  Hailey A, Coulson IM. 1996. Home Range Use and Seasonal Movements of the Egyptian Tortoise (Testudo kleinmanni) in the Northwestern Negev, Israel. Canadian Journal of Zoology 74, 97-102.
-## 221                                                                                      Wanchai P, Stanford CB, Thirakhupt K, Thankhikorn S. 2012. Home Range of the Impressed Tortoise, Manouria impressa (G\xfcnther,1882) at Phu Luang Wildlife Sanctuary, Loei Province, Thailand. Tropical Natural History 12(2), 165-174
-## 222                                                                                                                                             Cunningham PL, Sumang A. 2008. Ecology of the Bushmanland Tent Tortoise (Psammobates tentorius verroxii) in Southern Namibia. Chelonian Conservation and biology 7(1), 119-124.
-## 223                                                                                                                                             McMaster MK, Downs CT. 2009. Home Range and Daily Movement of Leopard Tortoises (Stigmochelys pardalis) in the Nama-Karoo, South Africa. Journal of Herpetology 43(4), 561-569.
-## 224                                                                               Anadon JD, Gimenez A, Perez I, Martinez M, Esteve MA. 2006. Habitat selection by the spur-thighed tortoise Testudo graeca in a multisuccessional landscape: implications for habitat management. Biodiversity and Conservation 15, 2287-2299.
-## 225                                                                                                                                   Rozylowicz L, Popescue VD. 2013. Habitat selection and movement ecology of eastern Hermann\x92s tortoises in a rural Romanian landscape. European Journal of Wildlife Research 59, 47-55.
-## 226                                                                                                                      Lagarde F, Bonnet X, Henen B, Legrand A, Borbin J, Nagy K, Naulleau G. 2003. Sex divergence in space utilisation in the steppe tortoise (Testudo horsfieldi). Canadian Journal of Zoology 81, 380-387.
-## 227                                                                                                                                         Geffen E, Mendelssohn H. 1988. Home Range Use and Seasonal Movements of the Egyptian Tortoise (Testudo kleinmanni) in the Northwestern Negev, Israel. Herpetologica 44(3), 354-359.
+##                                                                                                                                                                                                                                                                                                                       hra.reference
+## 1                                                                                                                                                                                      Nursall JR. 1974. Some Territorial Behavioral Attributes of the Surgeonfish Acanthurus lineatus at Heron Island, Queensland. Copeia 950-959.
+## 2                                                                                                                             Marshell A, Mills JS, Rhodes KL, et al. 2011. Passive acoustic telemetry reveals highly variable home range and movement patterns among unicornfish within a marine reserve. Coral Reefs 30, 631-642.
+## 3                                                                                                                             Marshell A, Mills JS, Rhodes KL, et al. 2011. Passive acoustic telemetry reveals highly variable home range and movement patterns among unicornfish within a marine reserve. Coral Reefs 30, 631-642.
+## 4                                                                                                                                                                                    Nursall JR. 1977. Territoriality in Redlip blennies (Ophioblennius atlanticus - Pisces : Blenniidae). Journal of Zoology, London 182, 205-223.
+## 5                                                                                       Eristhee N, Oxenford HA. 2001. Home range size and use of space by Bermuda chub Kyphosus sectatrix (L.) in two marine reserves in the Soufri<e8>re Marine Management Area, St Lucia, West Indies. Journal of Fisheries Biology 59, 129-151.
+## 6                                                                                                                                                                                                            Luckhurst BE, Luckhurst K. 1978. Diurnal Space Utilization in Coral Reef Fish Communities. Marine Biology 49, 325-332.
+## 7                                                                                                                                                               Mapstone GM, Wood EM. 1975. The ethology of Abudefduf luridus and Chromis chromis (Pisces: Pomacentridae) from the Azores. Journal of Zoology, London 175, 179-199.
+## 8                                                                                                                                                                               Keenleyside MHA. 1972. The Behaviour of Abudefduf zonatus (Pisces, Pomacentridae) at Heron Island, Great Barrier Reef. Animal Behavior 20, 763-774.
+## 9                                                                                                                              Sale PF. 1974. Mechanisms of co-existence in a guild of territorial fishes at Heron Island. pp. 193-206. In: Proc. Second Intern. Symp. Coral Reefs, Vol. 1, Great Barrier Reef Committee. Brisbane.
+## 10                                                                                                                                                                                                      Sale PF. 1978. Coexistence of coral reef fishes - a lottery for living space. Environmental Biology of Fishes 3(1), 85-102.
+## 11                                                                                                                                                                                                           Luckhurst BE, Luckhurst K. 1978. Diurnal Space Utilization in Coral Reef Fish Communities. Marine Biology 49, 325-332.
+## 12                                                                                                                                                                             Gronell A. 1980. Space utilization by the cocoa damselfish Eupomacentrus variabilis (Pisces: Pomacentridae). Bulletin of Marine Science 30, 237-251.
+## 13                                                                                                                                Welsh JQ, Bellwood DR. 2011. Spatial ecology of the steephead parrotfish (Chlorurus microrhinos): an evaluation using acoustic telemetry. Coral Reefs 31, 55-65. (doi: 10.1007/s00338-011-0813-8)
+## 14                                                                                                                                         Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
+## 15                                                                                                                                                      Welsh JQ, Bellwood DR. .2012. How far do schools of roving herbivores rove? A case study using Scarus rivulatus. Coral Reefs 31, 991-1003. (doi: 10.1007/s00338-012-0922-z)
+## 16                                                                                                                                         Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
+## 17                                                                                                                                         Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
+## 18                                                                                                                                         Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
+## 19                                                                                                                                         Mumby PJ, Wabnitz CCC. 2002. Spatial patterns of aggression, territory size, and harem size in five sympatric Caribbean parrotfish species. Environmental Biology of Fishes 63, 265-279.
+## 20                                                                                                                Jadot C, Donnay A, Acolas ML, et al. 2006. Activity patterns, home-range size, and habitat utilization of Sarpa salpa (Teleostei: Sparidae) in the Mediterranean Sea. ICES Journal of Marine Science 63, 128-139.
+## 21                                                                                                                Namgail T, Takekawa JY, Balachandran S, Sathiyaselvam P, Mundkur T, Newman SH. 2014. Space use of wintering waterbirds in India: Influence of trophic ecology on home-range size. Current Zoology 60(5), 616-621.
+## 22                                                                                                                                                                                                                                              Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
+## 23                                                                                                                                           Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
+## 24                                                                                                                                           Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
+## 25                                                                                                                                           Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
+## 26                                                                                                                                                                                Eng RL, Schladweiler P. 1972. Sage Grouse Winter Movements and Habitat Use in Central Montana. The Journal of Wildlife Management 36(1), 141-146.
+## 27                                                                                                                                                                                                                                              Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
+## 28                                                                                                                                                                                                                                              Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
+## 29                                                                                                                                           Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
+## 30                                                                                                                                           Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
+## 31                                                                                                                                           Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
+## 32  Patten, M. A., C. L. Pruett, and D. H. Wolfe. 2011. Home range size and movements of Greater Prairie-Chickens. Pp. 51<U+0096>62 in B. K. Sandercock, K. Martin, and G. Segelbacher (editors). Ecology, conservation, and management of grouse. Studies in Avian Biology (no. 39), University of California Press, Berkeley, CA.
+## 33                                                                                                                                                                          Grabovsky VI. 1993.Spatial Distribution and Spacing Behaviour of Males in a Russion Corncrake (Crex crex) Population. Gibier Faune Sauvage 10, 259-279.
+## 34                                                                                                                                                                                                                                              Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
+## 35                            Nolazco S, Sanchez AM, Roper JJ. 2014. Tama<f1>o poblacional, distribuci<f3>n y <e1>mbito de hogar de la Cortarrama Peruana (Phytotoma raimondii) en el Santuario Hist<f3>rico Bosque de P<f3>mac, Lambayeque, Per<fa>. Bolet<ed>n de la Uni<f3>n de Ornit<f3>logos del Per<fa> (UNOP), 9 (2): 5-19 .
+## 36                                                                                                                                                                                                                                              Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
+## 37                                                                                                                                                                                                                                              Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
+## 38                                                                                                                                           Ottaviani, D., S. C. Cairns, M. Oliverio, and L. Boitani. 2006. Body mass as a predictive variable of home-range size among Italian mammals and birds. Journal of Zoology 269:317-330.
+## 39                                                                                                                                                                        Frith CB, Frith DW. 2001. Morphology, Moult, and Survival in Three Sympatric Bowerirds in Australian Wet Tropics Upland Rainforest. Corella 25(3), 41-60.
+## 40                                                                                                                                                                                                           Farrimond M, Clout MN. 2006. Home range size of kakapo (Strigops habroptilus) on Codfish Island. Notornis 53, 150-152.
+## 41                                                                                                                                                Bellis LM, Martella MB, Navarro JL, Vignolo PE. 2004. Home range of greater and lesser rhea in Argentina: relevance to conservation. Biodiversity and Conservation 13, 2589-2598.
+## 42                                                                                                                                                Bellis LM, Martella MB, Navarro JL, Vignolo PE. 2004. Home range of greater and lesser rhea in Argentina: relevance to conservation. Biodiversity and Conservation 13, 2589-2598.
+## 43                                                                                                                    Williams JB, Siegfried WR, Milton SJ, Adams NJ, Dean WRT, du Plessis MA, Jackson S. 1993. Field Metabolism, Water Requirements, and Foraging Behavior of Wild Ostriches in the Namib. Ecology 74(2), 390-404.
+## 44                                                                                                                                                                                                                                              Schoener, T. W. 1968. Sizes of feeding territories among birds. Ecology 49:123-141.
+## 45                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 46                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 47                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 48                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 49                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 50                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 51                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 52                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 53                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 54                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 55                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 56                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 57                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 58                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 59                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 60                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 61                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 62                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 63                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 64                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 65                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 66                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 67                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 68                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 69                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 70                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 71                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 72                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 73                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 74                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 75                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 76                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 77                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 78                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 79                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 80                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 81                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 82                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 83                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 84                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 85                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 86                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 87                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 88                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 89                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 90                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 91                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 92                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 93                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 94                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 95                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 96                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 97                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 98                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 99                                                                                           Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 100                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 101                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 102                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 103                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 104                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 105                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 106                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 107                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 108                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 109                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 110                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 111                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 112                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 113                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 114                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 115                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 116                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 117                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 118                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 119                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 120                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 121                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 122                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 123                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 124                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 125                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 126                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 127                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 128                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 129                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 130                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 131                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 132                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 133                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 134                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 135                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 136                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 137                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 138                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 139                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 140                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 141                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 142                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 143                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 144                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 145                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 146                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 147                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 148                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 149                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 150                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 151                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 152                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 153                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 154                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 155                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 156                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 157                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 158                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 159                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 160                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 161                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 162                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 163                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 164                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 165                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 166                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 167                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 168                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 169                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 170                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 171                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 172                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 173                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 174                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 175                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 176                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 177                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 178                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 179                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 180                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 181                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 182                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 183                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 184                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 185                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 186                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 187                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 188                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 189                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 190                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 191                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 192                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 193                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 194                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 195                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 196                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 197                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 198                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 199                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 200                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 201                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 202                                                                                          Kelt, D. A., and D. Van Vuren. 1999. Energetic constraints and the relationship between body size and home range area in mammals. Ecology 80:337-340; Kelt, D. A., and D. Van Vuren. In press. Home ranges of recent mammals. Ecology.
+## 203                                                                                                              Cunningham P. 2000. Daily activity pattern and diet of a population of the Spinytailed Lizard, Uromastyx aegyptius microlepis, during summer in the United Arab Emirates. Zoology in the Middle East 21(1), 37-46.
+## 204                                                                                                                                                         Christian KA, Tracy CR. 1985. Physical and biotic determinants of space utilization by the Galapagos land iguana (Conolophus pallidus). Oecologia (Berlin) 66, 132-140.
+## 205                                                                                                                                                                           Knapp CR, Owens AK. 2005. Home range and habitat associations of a Bahamian iguana: implications for conservation. Animal Conservation 8(3), 269-278.
+## 206                                                                                                                                            Goodman RM, Echternact AC, Burton FJ. 2005. Spatial Ecology of the Endangered Iguana, Cyclura lewisi, in a Disturbed Setting on Grand Cayman. Journal of Herpetology 39(3), 402-408.
+## 207                                                                                                                                     Mitchell NC. 1999. Effect of Introduced Ungulates on Density, Dietary Preferences, Home Range, and PhysicalCondition of the Iguana (Cyclura pinguis) on Anegada. Herpetologica 55(1), 7-17.
+## 208                                                                                                                                                                                      Smits AW. 1985. Behavioral and Dietary Responses to Aridity in the Chuckwalla, Sauromalus hispidus. Journal of Herpetology 19(4), 441-449.
+## 209                                                                                                                                                                        Johnson SR. 1965. An Ecological Study of the Chuckwalla, Sauromalus obesus Baird, in the Western Mojave Desert. American Midland Naturalist 73(1), 1-29.
+## 210                                                                                                                                                                                                       Alberts AC. 1993. Relationship of Space Use to Population Density in an Herbivorous Lizard. Herpetologica 49(4), 469-479.
+## 211                                                                                                                                                                                    Borja MM. 1985. Spatial and Temporal behaviour of Gallotia galloti in a Natural Population of Tenerife. Bonn. Zool. Beitr. 36(3/4), 541-552.
+## 212                                                                                                                   D<ed>az SA. 2007. Relevant autecological aspects for phymaturus flagellifer (reptilia, Tropiduridae) conservation in the altos de lircay national reserve, Maule region. Thesis, University of Chile, 41pp.\n
+## 213                                                                                                                                           Osterwalder K, Klingenbock A, Shine R. 2004. Field studies on a social lizard: Home range and social organization in an Australian skink, Egernia major. Austral Ecology 29, 241-249.
+## 214                                                                                                                                   Bernstein NP, Richtsmeier RJ., Black RW, Montgomery BJ. 2007. Home Range and Philopatry in the Ornate Box Turtle, Terrapene ornata ornata, in Iowa. American Midland Naturalist 157, 162-174.
+## 215                                                                                                  P<e9>rez-Santigosa N, Hidalgo-Vila J, D<ed>az-Paniagua C. 2013. Comparing Activity Patterns and Aquatic Home Range Areas Among Exotic and Native Turtles in Southern Spain. Chelonian Conservation and Biology 12(2), 313-319.
+## 216                                                      Monta<f1>o RR, Cu<e9>llar E, Fitzgerald LA, Soria F, Mendoza F, Pe<f1>a R, Dosapey T, Deem SL, Noss AJ. 2013. Ranging patterns by the red-footed tortoise - Geochelone carbonaria (Testudines: Testudinidae) - in the Bolivian Chaco. Ecolog<ed>a en Bolivia 48(1), 17-30.
+## 217                                                                                                                                                                       Duda JJ, Krzysik AJ, Freilich JE. 1999. Effects of Drought on Desert Tortoise Movement and Activity. The Journal of Wildlife Management 63(4), 1181-1192.
+## 218                                                                                                                                                                                       Diemer JE. 1992. Home Range and Movements of the Tortoise Gopherus polyphemus in Northern Florida. Journal of Herpetology 26(2), 158-165.
+## 219                                                                                                                                                                        Vasudevan, K., Pandav, B & Deepak, V. 2010.Ecology of two endemic turtles in the Western Ghats. Final Technical Report, Wildlife Institute of India 74p.
+## 220                                                                                                                                      Hailey A, Coulson IM. 1996. Home Range Use and Seasonal Movements of the Egyptian Tortoise (Testudo kleinmanni) in the Northwestern Negev, Israel. Canadian Journal of Zoology 74, 97-102.
+## 221                                                                                          Wanchai P, Stanford CB, Thirakhupt K, Thankhikorn S. 2012. Home Range of the Impressed Tortoise, Manouria impressa (G<fc>nther,1882) at Phu Luang Wildlife Sanctuary, Loei Province, Thailand. Tropical Natural History 12(2), 165-174
+## 222                                                                                                                                                 Cunningham PL, Sumang A. 2008. Ecology of the Bushmanland Tent Tortoise (Psammobates tentorius verroxii) in Southern Namibia. Chelonian Conservation and biology 7(1), 119-124.
+## 223                                                                                                                                                 McMaster MK, Downs CT. 2009. Home Range and Daily Movement of Leopard Tortoises (Stigmochelys pardalis) in the Nama-Karoo, South Africa. Journal of Herpetology 43(4), 561-569.
+## 224                                                                                   Anadon JD, Gimenez A, Perez I, Martinez M, Esteve MA. 2006. Habitat selection by the spur-thighed tortoise Testudo graeca in a multisuccessional landscape: implications for habitat management. Biodiversity and Conservation 15, 2287-2299.
+## 225                                                                                                                                   Rozylowicz L, Popescue VD. 2013. Habitat selection and movement ecology of eastern Hermann<U+0092>s tortoises in a rural Romanian landscape. European Journal of Wildlife Research 59, 47-55.
+## 226                                                                                                                          Lagarde F, Bonnet X, Henen B, Legrand A, Borbin J, Nagy K, Naulleau G. 2003. Sex divergence in space utilisation in the steppe tortoise (Testudo horsfieldi). Canadian Journal of Zoology 81, 380-387.
+## 227                                                                                                                                             Geffen E, Mendelssohn H. 1988. Home Range Use and Seasonal Movements of the Egyptian Tortoise (Testudo kleinmanni) in the Northwestern Negev, Israel. Herpetologica 44(3), 354-359.
 ##           realm thermoregulation locomotion trophic.guild dimension preymass
 ## 1       aquatic        ectotherm   swimming     herbivore        2D       NA
 ## 2       aquatic        ectotherm   swimming     herbivore        2D       NA
@@ -7051,8 +7044,8 @@ filter(homerange, genus =="alces", species =="alces")
 ## # A tibble: 1 x 24
 ##   taxon common.name class order family genus species primarymethod N    
 ##   <fct> <chr>       <chr> <fct> <chr>  <chr> <chr>   <chr>         <chr>
-## 1 mamm… moose       mamm… arti… cervi… alces alces   telemetry*    <NA> 
-## # … with 15 more variables: mean.mass.g <dbl>, log10.mass <dbl>,
+## 1 mamm~ moose       mamm~ arti~ cervi~ alces alces   telemetry*    <NA> 
+## # ... with 15 more variables: mean.mass.g <dbl>, log10.mass <dbl>,
 ## #   alternative.mass.reference <chr>, mean.hra.m2 <dbl>, log10.hra <dbl>,
 ## #   hra.reference <chr>, realm <chr>, thermoregulation <chr>, locomotion <chr>,
 ## #   trophic.guild <chr>, dimension <chr>, preymass <dbl>, log10.preymass <dbl>,
@@ -7071,17 +7064,17 @@ snek
 ## # A tibble: 41 x 24
 ##    taxon common.name class order family genus species primarymethod N    
 ##    <fct> <chr>       <chr> <fct> <chr>  <chr> <chr>   <chr>         <chr>
-##  1 snak… western wo… rept… squa… colub… carp… vermis  radiotag      1    
-##  2 snak… eastern wo… rept… squa… colub… carp… viridis radiotag      10   
-##  3 snak… racer       rept… squa… colub… colu… constr… telemetry     15   
-##  4 snak… yellow bel… rept… squa… colub… colu… constr… telemetry     12   
-##  5 snak… ringneck s… rept… squa… colub… diad… puncta… mark-recaptu… <NA> 
-##  6 snak… eastern in… rept… squa… colub… drym… couperi telemetry     1    
-##  7 snak… great plai… rept… squa… colub… elap… guttat… telemetry     12   
-##  8 snak… western ra… rept… squa… colub… elap… obsole… telemetry     18   
-##  9 snak… hognose sn… rept… squa… colub… hete… platir… telemetry     8    
-## 10 snak… European w… rept… squa… colub… hier… viridi… telemetry     32   
-## # … with 31 more rows, and 15 more variables: mean.mass.g <dbl>,
+##  1 snak~ western wo~ rept~ squa~ colub~ carp~ vermis  radiotag      1    
+##  2 snak~ eastern wo~ rept~ squa~ colub~ carp~ viridis radiotag      10   
+##  3 snak~ racer       rept~ squa~ colub~ colu~ constr~ telemetry     15   
+##  4 snak~ yellow bel~ rept~ squa~ colub~ colu~ constr~ telemetry     12   
+##  5 snak~ ringneck s~ rept~ squa~ colub~ diad~ puncta~ mark-recaptu~ <NA> 
+##  6 snak~ eastern in~ rept~ squa~ colub~ drym~ couperi telemetry     1    
+##  7 snak~ great plai~ rept~ squa~ colub~ elap~ guttat~ telemetry     12   
+##  8 snak~ western ra~ rept~ squa~ colub~ elap~ obsole~ telemetry     18   
+##  9 snak~ hognose sn~ rept~ squa~ colub~ hete~ platir~ telemetry     8    
+## 10 snak~ European w~ rept~ squa~ colub~ hier~ viridi~ telemetry     32   
+## # ... with 31 more rows, and 15 more variables: mean.mass.g <dbl>,
 ## #   log10.mass <dbl>, alternative.mass.reference <chr>, mean.hra.m2 <dbl>,
 ## #   log10.hra <dbl>, hra.reference <chr>, realm <chr>, thermoregulation <chr>,
 ## #   locomotion <chr>, trophic.guild <chr>, dimension <chr>, preymass <dbl>,
@@ -7096,8 +7089,8 @@ filter(homerange, mean.hra.m2 == min(snek$mean.hra.m2))
 ## # A tibble: 1 x 24
 ##   taxon common.name class order family genus species primarymethod N    
 ##   <fct> <chr>       <chr> <fct> <chr>  <chr> <chr>   <chr>         <chr>
-## 1 snak… namaqua dw… rept… squa… viper… bitis schnei… telemetry     11   
-## # … with 15 more variables: mean.mass.g <dbl>, log10.mass <dbl>,
+## 1 snak~ namaqua dw~ rept~ squa~ viper~ bitis schnei~ telemetry     11   
+## # ... with 15 more variables: mean.mass.g <dbl>, log10.mass <dbl>,
 ## #   alternative.mass.reference <chr>, mean.hra.m2 <dbl>, log10.hra <dbl>,
 ## #   hra.reference <chr>, realm <chr>, thermoregulation <chr>, locomotion <chr>,
 ## #   trophic.guild <chr>, dimension <chr>, preymass <dbl>, log10.preymass <dbl>,
