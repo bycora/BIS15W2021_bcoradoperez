@@ -26,8 +26,8 @@ library(janitor)
 ## Install `here`
 The package `here` is a nice option for keeping directories clear when loading files. I will demonstrate below and let you decide if it is something you want to use.  
 ```{r}
-#install.packages("here")
-#knitting kept getting exhaulted when reaching this line, not sure why
+# install.packages("here")
+# knitting kept getting exhaulted when reaching this line, not sure why
 ```
 
 ## Data
@@ -56,12 +56,17 @@ The quotes show the folder structure from the root directory.
 ```{r}
 sydneybeaches <-read_csv(here("lab8", "data", "sydneybeaches.csv")) %>% janitor::clean_names()
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 2. Are these data "tidy" per the definitions of the tidyverse? How do you know? Are they in wide or long format?
 ```{r}
 sydneybeaches
 ```
 #The data is in long format and it is not tidy since some of the columns are actually variables.
+</div>
 
 3. We are only interested in the variables site, date, and enterococci_cfu_100ml. Make a new object focused on these variables only. Name the object `sydneybeaches_long`
 ```{r}

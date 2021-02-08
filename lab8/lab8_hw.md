@@ -1,7 +1,7 @@
 ---
 title: "Lab 8 Homework"
 author: "Byron Corado Perez"
-date: "2021-02-04"
+date: "2021-02-08"
 output:
   html_document: 
     theme: spacelab
@@ -26,8 +26,8 @@ library(janitor)
 The package `here` is a nice option for keeping directories clear when loading files. I will demonstrate below and let you decide if it is something you want to use.  
 
 ```r
-#install.packages("here")
-#knitting kept getting exhaulted when reaching this line, not sure why
+# install.packages("here")
+# knitting kept getting exhaulted when reaching this line, not sure why
 ```
 
 ## Data
@@ -44,7 +44,7 @@ sydneybeaches <-readr::read_csv("data/sydneybeaches.csv") %>%
 
 ```
 ## 
-## ── Column specification ────────────────────────────────────────────────────────
+## -- Column specification --------------------------------------------------------
 ## cols(
 ##   BeachId = col_double(),
 ##   Region = col_character(),
@@ -64,14 +64,14 @@ glimpse(sydneybeaches)
 ```
 ## Rows: 3,690
 ## Columns: 8
-## $ beach_id              <dbl> 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25,…
-## $ region                <chr> "Sydney City Ocean Beaches", "Sydney City Ocean…
-## $ council               <chr> "Randwick Council", "Randwick Council", "Randwi…
-## $ site                  <chr> "Clovelly Beach", "Clovelly Beach", "Clovelly B…
-## $ longitude             <dbl> 151.2675, 151.2675, 151.2675, 151.2675, 151.267…
-## $ latitude              <dbl> -33.91449, -33.91449, -33.91449, -33.91449, -33…
-## $ date                  <chr> "02/01/2013", "06/01/2013", "12/01/2013", "18/0…
-## $ enterococci_cfu_100ml <dbl> 19, 3, 2, 13, 8, 7, 11, 97, 3, 0, 6, 0, 1, 8, 3…
+## $ beach_id              <dbl> 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 2...
+## $ region                <chr> "Sydney City Ocean Beaches", "Sydney City Oce...
+## $ council               <chr> "Randwick Council", "Randwick Council", "Rand...
+## $ site                  <chr> "Clovelly Beach", "Clovelly Beach", "Clovelly...
+## $ longitude             <dbl> 151.2675, 151.2675, 151.2675, 151.2675, 151.2...
+## $ latitude              <dbl> -33.91449, -33.91449, -33.91449, -33.91449, -...
+## $ date                  <chr> "02/01/2013", "06/01/2013", "12/01/2013", "18...
+## $ enterococci_cfu_100ml <dbl> 19, 3, 2, 13, 8, 7, 11, 97, 3, 0, 6, 0, 1, 8,...
 ```
 
 ```r
@@ -120,7 +120,7 @@ library(here)
 ```
 
 ```
-## here() starts at /Users/Zuzu/Desktop/BIS15W2021_bcoradoperez
+## here() starts at D:/TA files/Winter2021 BIS15L/students_rep/BIS15W2021_bcoradoperez
 ```
 
 The quotes show the folder structure from the root directory.
@@ -131,7 +131,7 @@ sydneybeaches <-read_csv(here("lab8", "data", "sydneybeaches.csv")) %>% janitor:
 
 ```
 ## 
-## ── Column specification ────────────────────────────────────────────────────────
+## -- Column specification --------------------------------------------------------
 ## cols(
 ##   BeachId = col_double(),
 ##   Region = col_character(),
@@ -143,6 +143,10 @@ sydneybeaches <-read_csv(here("lab8", "data", "sydneybeaches.csv")) %>% janitor:
 ##   `Enterococci (cfu/100ml)` = col_double()
 ## )
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 2. Are these data "tidy" per the definitions of the tidyverse? How do you know? Are they in wide or long format?
 
@@ -152,21 +156,22 @@ sydneybeaches
 
 ```
 ## # A tibble: 3,690 x 8
-##    beach_id region    council   site   longitude latitude date  enterococci_cfu…
+##    beach_id region    council   site   longitude latitude date  enterococci_cfu~
 ##       <dbl> <chr>     <chr>     <chr>      <dbl>    <dbl> <chr>            <dbl>
-##  1       25 Sydney C… Randwick… Clove…      151.    -33.9 02/0…               19
-##  2       25 Sydney C… Randwick… Clove…      151.    -33.9 06/0…                3
-##  3       25 Sydney C… Randwick… Clove…      151.    -33.9 12/0…                2
-##  4       25 Sydney C… Randwick… Clove…      151.    -33.9 18/0…               13
-##  5       25 Sydney C… Randwick… Clove…      151.    -33.9 30/0…                8
-##  6       25 Sydney C… Randwick… Clove…      151.    -33.9 05/0…                7
-##  7       25 Sydney C… Randwick… Clove…      151.    -33.9 11/0…               11
-##  8       25 Sydney C… Randwick… Clove…      151.    -33.9 23/0…               97
-##  9       25 Sydney C… Randwick… Clove…      151.    -33.9 07/0…                3
-## 10       25 Sydney C… Randwick… Clove…      151.    -33.9 25/0…                0
-## # … with 3,680 more rows
+##  1       25 Sydney C~ Randwick~ Clove~      151.    -33.9 02/0~               19
+##  2       25 Sydney C~ Randwick~ Clove~      151.    -33.9 06/0~                3
+##  3       25 Sydney C~ Randwick~ Clove~      151.    -33.9 12/0~                2
+##  4       25 Sydney C~ Randwick~ Clove~      151.    -33.9 18/0~               13
+##  5       25 Sydney C~ Randwick~ Clove~      151.    -33.9 30/0~                8
+##  6       25 Sydney C~ Randwick~ Clove~      151.    -33.9 05/0~                7
+##  7       25 Sydney C~ Randwick~ Clove~      151.    -33.9 11/0~               11
+##  8       25 Sydney C~ Randwick~ Clove~      151.    -33.9 23/0~               97
+##  9       25 Sydney C~ Randwick~ Clove~      151.    -33.9 07/0~                3
+## 10       25 Sydney C~ Randwick~ Clove~      151.    -33.9 25/0~                0
+## # ... with 3,680 more rows
 ```
 #The data is in long format and it is not tidy since some of the columns are actually variables.
+</div>
 
 3. We are only interested in the variables site, date, and enterococci_cfu_100ml. Make a new object focused on these variables only. Name the object `sydneybeaches_long`
 
@@ -201,7 +206,7 @@ sydneybeaches_long
 ##  8 Clovelly Beach 23/02/2013                    97
 ##  9 Clovelly Beach 07/03/2013                     3
 ## 10 Clovelly Beach 25/03/2013                     0
-## # … with 3,680 more rows
+## # ... with 3,680 more rows
 ```
 
 4. Pivot the data such that the dates are column names and each beach only appears once. Name the object `sydneybeaches_wide`
@@ -217,18 +222,18 @@ sydneybeaches_wide
 ## # A tibble: 11 x 345
 ##    site  `02/01/2013` `06/01/2013` `12/01/2013` `18/01/2013` `30/01/2013`
 ##    <chr>        <dbl>        <dbl>        <dbl>        <dbl>        <dbl>
-##  1 Clov…           19            3            2           13            8
-##  2 Coog…           15            4           17           18           22
-##  3 Gord…           NA           NA           NA           NA           NA
-##  4 Litt…            9            3           72            1           44
-##  5 Mala…            2            4          390           15           13
-##  6 Maro…            1            1           20            2           11
-##  7 Sout…            1            0           33            2           13
-##  8 Sout…           12            2          110           13          100
-##  9 Bond…            3            1            2            1            6
-## 10 Bron…            4            2           38            3           25
-## 11 Tama…            1            0            7           22           23
-## # … with 339 more variables: `05/02/2013` <dbl>, `11/02/2013` <dbl>,
+##  1 Clov~           19            3            2           13            8
+##  2 Coog~           15            4           17           18           22
+##  3 Gord~           NA           NA           NA           NA           NA
+##  4 Litt~            9            3           72            1           44
+##  5 Mala~            2            4          390           15           13
+##  6 Maro~            1            1           20            2           11
+##  7 Sout~            1            0           33            2           13
+##  8 Sout~           12            2          110           13          100
+##  9 Bond~            3            1            2            1            6
+## 10 Bron~            4            2           38            3           25
+## 11 Tama~            1            0            7           22           23
+## # ... with 339 more variables: `05/02/2013` <dbl>, `11/02/2013` <dbl>,
 ## #   `23/02/2013` <dbl>, `07/03/2013` <dbl>, `25/03/2013` <dbl>,
 ## #   `02/04/2013` <dbl>, `12/04/2013` <dbl>, `18/04/2013` <dbl>,
 ## #   `24/04/2013` <dbl>, `01/05/2013` <dbl>, `20/05/2013` <dbl>,
@@ -261,7 +266,7 @@ sydneybeaches_wide
 ## #   `29/03/2014` <dbl>, `22/04/2014` <dbl>, `14/04/2014` <dbl>,
 ## #   `30/04/2014` <dbl>, `12/05/2014` <dbl>, `28/05/2014` <dbl>,
 ## #   `03/06/2014` <dbl>, `19/06/2014` <dbl>, `03/07/2014` <dbl>,
-## #   `18/07/2014` <dbl>, `01/08/2014` <dbl>, …
+## #   `18/07/2014` <dbl>, `01/08/2014` <dbl>, ...
 ```
 
 5. Pivot the data back so that the dates are data and not column names.
@@ -288,7 +293,7 @@ sydneybeaches_long_v2
 ##  8 Clovelly Beach 23/02/2013                    97
 ##  9 Clovelly Beach 07/03/2013                     3
 ## 10 Clovelly Beach 25/03/2013                     0
-## # … with 3,774 more rows
+## # ... with 3,774 more rows
 ```
 
 6. We haven't dealt much with dates yet, but separate the date into columns day, month, and year. Do this on the `sydneybeaches_long` data.
@@ -312,7 +317,7 @@ sydneybeaches_long %>%
 ##  8 Clovelly Beach 23    02    2013                     97
 ##  9 Clovelly Beach 07    03    2013                      3
 ## 10 Clovelly Beach 25    03    2013                      0
-## # … with 3,680 more rows
+## # ... with 3,680 more rows
 ```
 
 7. What is the average `enterococci_cfu_100ml` by year for each beach. Think about which data you will use- long or wide.
@@ -341,7 +346,7 @@ syd_beaches_long_avg_cocci
 ##  8 2013  Maroubra Beach                    47.1 
 ##  9 2013  South Maroubra Beach              39.3 
 ## 10 2013  South Maroubra Rockpool           96.4 
-## # … with 56 more rows
+## # ... with 56 more rows
 ```
 
 8. Make the output from question 7 easier to read by pivoting it to wide format.
