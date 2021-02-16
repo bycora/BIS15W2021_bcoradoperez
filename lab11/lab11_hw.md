@@ -396,5 +396,7 @@ gapminder %>%
 
 ![](lab11_hw_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
+##Was having issues with pushing this file which is why it's a little late
+
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences. 

@@ -204,5 +204,7 @@ gapminder %>%
   theme(plot.title=element_text(hjust=0.5), axis.text.x = element_text(angle=45, hjust=1))
 ```
 
+##Was having issues with pushing this file which is why it's a little late
+
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences. 
