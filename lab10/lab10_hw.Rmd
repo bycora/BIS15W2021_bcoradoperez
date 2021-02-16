@@ -152,6 +152,14 @@ deserts %>%
        y = "n",
        fill = "Sex")
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences. 
+
+# .md file is missing
+
+</div>
