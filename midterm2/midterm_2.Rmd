@@ -102,6 +102,10 @@ life_expectancy_tidy %>%
 #There are 195 total countries represented in population, 193 countries represented in income, & 187 countries represented in income.
 
 ## Life Expectancy  
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 3. (2 points) Let's limit the data to the past 100 years (1920-2020). For these years, which country has the highest life expectancy? How about the lowest life expectancy?  
 
@@ -123,6 +127,8 @@ life_expectancy_tidy %>%
   head(n=1)
 ```
 #Kazakhstan had the lowest life expectancy with an age of 4.07 years.
+
+
 4. (3 points) Although we can see which country has the highest life expectancy for the past 100 years, we don't know which countries have changed the most. What are the top 5 countries that have experienced the biggest improvement in life expectancy between 1920-2020?
 ```{r}
 life_expectancy_tidy %>% 
@@ -156,6 +162,7 @@ life_expectancy_tidy %>%
   theme(plot.title=element_text(hjust=0.5), axis.text.x = element_text(angle = 45, hjust=1))
 ```
 #In 1994 we see a drastic drop in life expectancy which can be due to the 1994 Rwandan genocide.
+</div>
 
 ## Population Growth
 6. (3 points) Which 5 countries have had the highest population growth over the past 100 years (1920-2020)?
